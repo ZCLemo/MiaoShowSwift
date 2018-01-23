@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A102E2DC1C644552B39ADD6 /* Pods_MiaoShowSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */; };
+		B95336A620172BD100B74B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336A520172BD100B74B9C /* AppDelegate.swift */; };
+		B95336AD20172BD100B74B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95336AC20172BD100B74B9C /* Assets.xcassets */; };
+		B95336BB20172BD100B74B9C /* MiaoShowSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336BA20172BD100B74B9C /* MiaoShowSwiftTests.swift */; };
+		B95336C620172BD100B74B9C /* MiaoShowSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336C520172BD100B74B9C /* MiaoShowSwiftUITests.swift */; };
+		B95336DD2017329300B74B9C /* ZCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336DC2017329300B74B9C /* ZCBaseViewController.swift */; };
+		B95336DF201732DC00B74B9C /* ZCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336DE201732DC00B74B9C /* ZCLoginViewController.swift */; };
+		B95336E32017368B00B74B9C /* ZCAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336E22017368B00B74B9C /* ZCAdViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B95336B720172BD100B74B9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B953369A20172BD100B74B9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B95336A120172BD100B74B9C;
+			remoteInfo = MiaoShowSwift;
+		};
+		B95336C220172BD100B74B9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B953369A20172BD100B74B9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B95336A120172BD100B74B9C;
+			remoteInfo = MiaoShowSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		357275C25F68F96FC7F55798 /* Pods-MiaoShowSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoShowSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoShowSwift/Pods-MiaoShowSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		6F4E7271C9778A83CF68B2A2 /* Pods-MiaoShowSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiaoShowSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiaoShowSwift/Pods-MiaoShowSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B95336A220172BD100B74B9C /* MiaoShowSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaoShowSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95336A520172BD100B74B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B95336AC20172BD100B74B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B95336B120172BD100B74B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95336B620172BD100B74B9C /* MiaoShowSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiaoShowSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95336BA20172BD100B74B9C /* MiaoShowSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiaoShowSwiftTests.swift; sourceTree = "<group>"; };
+		B95336BC20172BD100B74B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95336C120172BD100B74B9C /* MiaoShowSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiaoShowSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95336C520172BD100B74B9C /* MiaoShowSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiaoShowSwiftUITests.swift; sourceTree = "<group>"; };
+		B95336C720172BD100B74B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95336DC2017329300B74B9C /* ZCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseViewController.swift; sourceTree = "<group>"; };
+		B95336DE201732DC00B74B9C /* ZCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginViewController.swift; sourceTree = "<group>"; };
+		B95336E22017368B00B74B9C /* ZCAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAdViewController.swift; sourceTree = "<group>"; };
+		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B953369F20172BD100B74B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A102E2DC1C644552B39ADD6 /* Pods_MiaoShowSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95336B320172BD100B74B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95336BE20172BD100B74B9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40CEC90264502F3514C5F233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A16548EEC14EC2438B0088F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				357275C25F68F96FC7F55798 /* Pods-MiaoShowSwift.debug.xcconfig */,
+				6F4E7271C9778A83CF68B2A2 /* Pods-MiaoShowSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B953369920172BD100B74B9C = {
+			isa = PBXGroup;
+			children = (
+				B95336A420172BD100B74B9C /* MiaoShowSwift */,
+				B95336B920172BD100B74B9C /* MiaoShowSwiftTests */,
+				B95336C420172BD100B74B9C /* MiaoShowSwiftUITests */,
+				B95336A320172BD100B74B9C /* Products */,
+				A16548EEC14EC2438B0088F0 /* Pods */,
+				40CEC90264502F3514C5F233 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B95336A320172BD100B74B9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B95336A220172BD100B74B9C /* MiaoShowSwift.app */,
+				B95336B620172BD100B74B9C /* MiaoShowSwiftTests.xctest */,
+				B95336C120172BD100B74B9C /* MiaoShowSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B95336A420172BD100B74B9C /* MiaoShowSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B95336A520172BD100B74B9C /* AppDelegate.swift */,
+				B95336AC20172BD100B74B9C /* Assets.xcassets */,
+				B95336B120172BD100B74B9C /* Info.plist */,
+				B95336D520172DAC00B74B9C /* Classes */,
+			);
+			path = MiaoShowSwift;
+			sourceTree = "<group>";
+		};
+		B95336B920172BD100B74B9C /* MiaoShowSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				B95336BA20172BD100B74B9C /* MiaoShowSwiftTests.swift */,
+				B95336BC20172BD100B74B9C /* Info.plist */,
+			);
+			path = MiaoShowSwiftTests;
+			sourceTree = "<group>";
+		};
+		B95336C420172BD100B74B9C /* MiaoShowSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B95336C520172BD100B74B9C /* MiaoShowSwiftUITests.swift */,
+				B95336C720172BD100B74B9C /* Info.plist */,
+			);
+			path = MiaoShowSwiftUITests;
+			sourceTree = "<group>";
+		};
+		B95336D520172DAC00B74B9C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B95336D82017324A00B74B9C /* Base */,
+				B95336E02017365200B74B9C /* AD */,
+				B95336D620172E4500B74B9C /* Login */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B95336D620172E4500B74B9C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B95336D720172E5400B74B9C /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B95336D720172E5400B74B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B95336DE201732DC00B74B9C /* ZCLoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B95336D82017324A00B74B9C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B95336DB2017326C00B74B9C /* Models */,
+				B95336DA2017326600B74B9C /* Views */,
+				B95336D92017325B00B74B9C /* Controllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B95336D92017325B00B74B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B95336DC2017329300B74B9C /* ZCBaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B95336DA2017326600B74B9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B95336DB2017326C00B74B9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B95336E02017365200B74B9C /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				B95336E12017366C00B74B9C /* Controllers */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		B95336E12017366C00B74B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B95336E22017368B00B74B9C /* ZCAdViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B95336A120172BD100B74B9C /* MiaoShowSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95336CA20172BD100B74B9C /* Build configuration list for PBXNativeTarget "MiaoShowSwift" */;
+			buildPhases = (
+				3B3E3932811AA03D8E3D12B8 /* [CP] Check Pods Manifest.lock */,
+				B953369E20172BD100B74B9C /* Sources */,
+				B953369F20172BD100B74B9C /* Frameworks */,
+				B95336A020172BD100B74B9C /* Resources */,
+				C6463D5D5282DD905E508DEA /* [CP] Embed Pods Frameworks */,
+				D1CEECD9B2E295F24E96187A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiaoShowSwift;
+			productName = MiaoShowSwift;
+			productReference = B95336A220172BD100B74B9C /* MiaoShowSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B95336B520172BD100B74B9C /* MiaoShowSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95336CD20172BD100B74B9C /* Build configuration list for PBXNativeTarget "MiaoShowSwiftTests" */;
+			buildPhases = (
+				B95336B220172BD100B74B9C /* Sources */,
+				B95336B320172BD100B74B9C /* Frameworks */,
+				B95336B420172BD100B74B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B95336B820172BD100B74B9C /* PBXTargetDependency */,
+			);
+			name = MiaoShowSwiftTests;
+			productName = MiaoShowSwiftTests;
+			productReference = B95336B620172BD100B74B9C /* MiaoShowSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B95336C020172BD100B74B9C /* MiaoShowSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95336D020172BD100B74B9C /* Build configuration list for PBXNativeTarget "MiaoShowSwiftUITests" */;
+			buildPhases = (
+				B95336BD20172BD100B74B9C /* Sources */,
+				B95336BE20172BD100B74B9C /* Frameworks */,
+				B95336BF20172BD100B74B9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B95336C320172BD100B74B9C /* PBXTargetDependency */,
+			);
+			name = MiaoShowSwiftUITests;
+			productName = MiaoShowSwiftUITests;
+			productReference = B95336C120172BD100B74B9C /* MiaoShowSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B953369A20172BD100B74B9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZC;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "赵琛";
+				TargetAttributes = {
+					B95336A120172BD100B74B9C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					B95336B520172BD100B74B9C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B95336A120172BD100B74B9C;
+					};
+					B95336C020172BD100B74B9C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B95336A120172BD100B74B9C;
+					};
+				};
+			};
+			buildConfigurationList = B953369D20172BD100B74B9C /* Build configuration list for PBXProject "MiaoShowSwift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B953369920172BD100B74B9C;
+			productRefGroup = B95336A320172BD100B74B9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B95336A120172BD100B74B9C /* MiaoShowSwift */,
+				B95336B520172BD100B74B9C /* MiaoShowSwiftTests */,
+				B95336C020172BD100B74B9C /* MiaoShowSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B95336A020172BD100B74B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95336AD20172BD100B74B9C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95336B420172BD100B74B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95336BF20172BD100B74B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B3E3932811AA03D8E3D12B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6463D5D5282DD905E508DEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoShowSwift/Pods-MiaoShowSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1CEECD9B2E295F24E96187A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoShowSwift/Pods-MiaoShowSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B953369E20172BD100B74B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95336E32017368B00B74B9C /* ZCAdViewController.swift in Sources */,
+				B95336DD2017329300B74B9C /* ZCBaseViewController.swift in Sources */,
+				B95336A620172BD100B74B9C /* AppDelegate.swift in Sources */,
+				B95336DF201732DC00B74B9C /* ZCLoginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95336B220172BD100B74B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95336BB20172BD100B74B9C /* MiaoShowSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95336BD20172BD100B74B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95336C620172BD100B74B9C /* MiaoShowSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B95336B820172BD100B74B9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B95336A120172BD100B74B9C /* MiaoShowSwift */;
+			targetProxy = B95336B720172BD100B74B9C /* PBXContainerItemProxy */;
+		};
+		B95336C320172BD100B74B9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B95336A120172BD100B74B9C /* MiaoShowSwift */;
+			targetProxy = B95336C220172BD100B74B9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B95336C820172BD100B74B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B95336C920172BD100B74B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B95336CB20172BD100B74B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357275C25F68F96FC7F55798 /* Pods-MiaoShowSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 55ZX76FW78;
+				INFOPLIST_FILE = MiaoShowSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bea50b63-741f-40db-bf79-6485c4fb3f73";
+				PROVISIONING_PROFILE_SPECIFIER = dev_provision_all;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B95336CC20172BD100B74B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F4E7271C9778A83CF68B2A2 /* Pods-MiaoShowSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 55ZX76FW78;
+				INFOPLIST_FILE = MiaoShowSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bea50b63-741f-40db-bf79-6485c4fb3f73";
+				PROVISIONING_PROFILE_SPECIFIER = dev_provision_all;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B95336CE20172BD100B74B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiaoShowSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiaoShowSwift.app/MiaoShowSwift";
+			};
+			name = Debug;
+		};
+		B95336CF20172BD100B74B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiaoShowSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiaoShowSwift.app/MiaoShowSwift";
+			};
+			name = Release;
+		};
+		B95336D120172BD100B74B9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiaoShowSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiaoShowSwift;
+			};
+			name = Debug;
+		};
+		B95336D220172BD100B74B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MiaoShowSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiaoShowSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B953369D20172BD100B74B9C /* Build configuration list for PBXProject "MiaoShowSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95336C820172BD100B74B9C /* Debug */,
+				B95336C920172BD100B74B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95336CA20172BD100B74B9C /* Build configuration list for PBXNativeTarget "MiaoShowSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95336CB20172BD100B74B9C /* Debug */,
+				B95336CC20172BD100B74B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95336CD20172BD100B74B9C /* Build configuration list for PBXNativeTarget "MiaoShowSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95336CE20172BD100B74B9C /* Debug */,
+				B95336CF20172BD100B74B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95336D020172BD100B74B9C /* Build configuration list for PBXNativeTarget "MiaoShowSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95336D120172BD100B74B9C /* Debug */,
+				B95336D220172BD100B74B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B953369A20172BD100B74B9C /* Project object */;
+}
