@@ -20,7 +20,7 @@ class ZCAppControllerManager {
         if ZCAdManager.sharedInstance().showAd() {
             ZCAdManager.sharedInstance().shownAd = true
             setUpAd()
-        }else if ZCAccountManager.sharedInstance().isLogin(){
+        }else if !ZCAccountManager.sharedInstance().isLogin(){
             setUpLogin()
         }else{
             setUpMain()
@@ -38,17 +38,21 @@ class ZCAppControllerManager {
     
     /// 加载登录
     private func setUpLogin(){
-        UIView.transition(with: keyWindow(), duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
-            let loginVC = ZCLoginViewController()
-            self.keyWindow().rootViewController = loginVC
-            self.keyWindow().makeKeyAndVisible()
-        }, completion: nil)
+        let loginVC = ZCLoginViewController()
+        keyWindow().rootViewController = loginVC
+        keyWindow().makeKeyAndVisible()
     }
     
     
     /// 加载主页
     private func setUpMain(){
+//        UIView.transition(with: keyWindow(), duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
+//            
+//        }, completion: nil)
         
+        let mainVC = ZCMainViewController()
+        keyWindow().rootViewController = mainVC
+        keyWindow().makeKeyAndVisible()
     }
     
     private func keyWindow() -> UIWindow{

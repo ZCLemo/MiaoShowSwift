@@ -27,8 +27,6 @@ class ZCCircleTimerView: UIView {
         
         timeInterval = duration/Double(maxCount)
         
-        self.backgroundColor = UIColor.clear
-        
         self.addSubview(skipBtn)
         skipBtn.snp.makeConstraints {
             $0.edges.equalTo(self)
@@ -77,7 +75,7 @@ class ZCCircleTimerView: UIView {
     }
     
     /// 开始倒计时
-    @objc func timerStart(){
+    @objc private func timerStart(){
         
         if minCount == maxCount {
             timer.invalidate()
@@ -91,7 +89,7 @@ class ZCCircleTimerView: UIView {
     
     
     /// 手动跳转
-    @objc func skipBtnClick(){
+    @objc private func skipBtnClick(){
         timer.invalidate()
         ZCAppControllerManager.sharedInstanced().setUpRoot()
     }

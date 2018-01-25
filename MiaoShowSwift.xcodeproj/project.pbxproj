@@ -21,6 +21,21 @@
 		B95336F5201825AD00B74B9C /* ZCSystemInfoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336F4201825AD00B74B9C /* ZCSystemInfoTool.swift */; };
 		B95336F92018568000B74B9C /* UIImageView+ZCCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336F82018568000B74B9C /* UIImageView+ZCCache.swift */; };
 		B95336FC20185E9500B74B9C /* ZCCircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336FB20185E9500B74B9C /* ZCCircleTimerView.swift */; };
+		B95337002019850A00B74B9C /* ZCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95336FF2019850A00B74B9C /* ZCMainViewController.swift */; };
+		B9533702201985C400B74B9C /* ZCBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9533701201985C400B74B9C /* ZCBaseNavigationViewController.swift */; };
+		B9533707201987B200B74B9C /* ZCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9533706201987B200B74B9C /* ZCHomeViewController.swift */; };
+		B953370A2019A41F00B74B9C /* ZCMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95337092019A41F00B74B9C /* ZCMyViewController.swift */; };
+		B9773C422019B00100C137A0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C412019B00100C137A0 /* TencentOpenAPI.framework */; };
+		B9773C442019B03B00C137A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C432019B03B00C137A0 /* SystemConfiguration.framework */; };
+		B9773C462019B04200C137A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C452019B04200C137A0 /* Security.framework */; };
+		B9773C482019B04900C137A0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C472019B04900C137A0 /* CoreTelephony.framework */; };
+		B9773C4A2019B05000C137A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C492019B05000C137A0 /* CoreGraphics.framework */; };
+		B9773C4C2019B05800C137A0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C4B2019B05800C137A0 /* libiconv.tbd */; };
+		B9773C4E2019B06300C137A0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C4D2019B06300C137A0 /* libsqlite3.tbd */; };
+		B9773C502019B06E00C137A0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C4F2019B06E00C137A0 /* libstdc++.tbd */; };
+		B9773C522019B07900C137A0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B9773C512019B07900C137A0 /* libz.tbd */; };
+		B9773C5A2019C2AA00C137A0 /* ZCAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9773C592019C2AA00C137A0 /* ZCAccount.swift */; };
+		B9773C5D2019DAD200C137A0 /* UIView+ZCHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9773C5C2019DAD200C137A0 /* UIView+ZCHud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +77,22 @@
 		B95336F4201825AD00B74B9C /* ZCSystemInfoTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSystemInfoTool.swift; sourceTree = "<group>"; };
 		B95336F82018568000B74B9C /* UIImageView+ZCCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ZCCache.swift"; sourceTree = "<group>"; };
 		B95336FB20185E9500B74B9C /* ZCCircleTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleTimerView.swift; sourceTree = "<group>"; };
+		B95336FF2019850A00B74B9C /* ZCMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMainViewController.swift; sourceTree = "<group>"; };
+		B9533701201985C400B74B9C /* ZCBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseNavigationViewController.swift; sourceTree = "<group>"; };
+		B9533706201987B200B74B9C /* ZCHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeViewController.swift; sourceTree = "<group>"; };
+		B95337092019A41F00B74B9C /* ZCMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyViewController.swift; sourceTree = "<group>"; };
+		B9773C412019B00100C137A0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		B9773C432019B03B00C137A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B9773C452019B04200C137A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B9773C472019B04900C137A0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B9773C492019B05000C137A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B9773C4B2019B05800C137A0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		B9773C4D2019B06300C137A0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B9773C4F2019B06E00C137A0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B9773C512019B07900C137A0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B9773C532019B46300C137A0 /* MiaoShowSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiaoShowSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		B9773C592019C2AA00C137A0 /* ZCAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAccount.swift; sourceTree = "<group>"; };
+		B9773C5C2019DAD200C137A0 /* UIView+ZCHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ZCHud.swift"; sourceTree = "<group>"; };
 		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,7 +101,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9773C522019B07900C137A0 /* libz.tbd in Frameworks */,
+				B9773C502019B06E00C137A0 /* libstdc++.tbd in Frameworks */,
+				B9773C4E2019B06300C137A0 /* libsqlite3.tbd in Frameworks */,
+				B9773C4C2019B05800C137A0 /* libiconv.tbd in Frameworks */,
+				B9773C4A2019B05000C137A0 /* CoreGraphics.framework in Frameworks */,
+				B9773C482019B04900C137A0 /* CoreTelephony.framework in Frameworks */,
+				B9773C462019B04200C137A0 /* Security.framework in Frameworks */,
+				B9773C442019B03B00C137A0 /* SystemConfiguration.framework in Frameworks */,
 				9A102E2DC1C644552B39ADD6 /* Pods_MiaoShowSwift.framework in Frameworks */,
+				B9773C422019B00100C137A0 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +134,14 @@
 		40CEC90264502F3514C5F233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9773C512019B07900C137A0 /* libz.tbd */,
+				B9773C4F2019B06E00C137A0 /* libstdc++.tbd */,
+				B9773C4D2019B06300C137A0 /* libsqlite3.tbd */,
+				B9773C4B2019B05800C137A0 /* libiconv.tbd */,
+				B9773C492019B05000C137A0 /* CoreGraphics.framework */,
+				B9773C472019B04900C137A0 /* CoreTelephony.framework */,
+				B9773C452019B04200C137A0 /* Security.framework */,
+				B9773C432019B03B00C137A0 /* SystemConfiguration.framework */,
 				CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */,
 			);
 			name = Frameworks;
@@ -133,8 +181,10 @@
 		B95336A420172BD100B74B9C /* MiaoShowSwift */ = {
 			isa = PBXGroup;
 			children = (
+				B9773C532019B46300C137A0 /* MiaoShowSwift-Bridging-Header.h */,
 				B95336AC20172BD100B74B9C /* Assets.xcassets */,
 				B95336B120172BD100B74B9C /* Info.plist */,
+				B9773C402019AFD600C137A0 /* Frameworks */,
 				B95336D520172DAC00B74B9C /* Classes */,
 			);
 			path = MiaoShowSwift;
@@ -163,7 +213,10 @@
 			children = (
 				B95336F22018253900B74B9C /* Tools */,
 				B95336E52017448600B74B9C /* AppController */,
+				B95336FD2019849400B74B9C /* Main */,
 				B95336D82017324A00B74B9C /* Base */,
+				B95337042019875300B74B9C /* My */,
+				B95337032019874A00B74B9C /* Home */,
 				B95336E02017365200B74B9C /* AD */,
 				B95336D620172E4500B74B9C /* Account */,
 			);
@@ -201,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B95336DC2017329300B74B9C /* ZCBaseViewController.swift */,
+				B9533701201985C400B74B9C /* ZCBaseNavigationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				B95336F02017596F00B74B9C /* ZCAccountManager.swift */,
+				B9773C592019C2AA00C137A0 /* ZCAccount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +337,7 @@
 		B95336F62018562500B74B9C /* UIFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				B9773C5B2019DA0F00C137A0 /* UIView */,
 				B95336F72018563B00B74B9C /* UIImageView */,
 			);
 			path = UIFoundation;
@@ -301,6 +357,70 @@
 				B95336FB20185E9500B74B9C /* ZCCircleTimerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B95336FD2019849400B74B9C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B95336FE201984B700B74B9C /* Controllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B95336FE201984B700B74B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B95336FF2019850A00B74B9C /* ZCMainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B95337032019874A00B74B9C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B9533708201987E800B74B9C /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B95337042019875300B74B9C /* My */ = {
+			isa = PBXGroup;
+			children = (
+				B95337052019879700B74B9C /* Controllers */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		B95337052019879700B74B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B95337092019A41F00B74B9C /* ZCMyViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9533708201987E800B74B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9533706201987B200B74B9C /* ZCHomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9773C402019AFD600C137A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9773C412019B00100C137A0 /* TencentOpenAPI.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9773C5B2019DA0F00C137A0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				B9773C5C2019DAD200C137A0 /* UIView+ZCHud.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +495,7 @@
 				TargetAttributes = {
 					B95336A120172BD100B74B9C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 					B95336B520172BD100B74B9C = {
@@ -488,15 +609,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B95336E7201744B100B74B9C /* AppDelegate.swift in Sources */,
+				B9533707201987B200B74B9C /* ZCHomeViewController.swift in Sources */,
 				B95336FC20185E9500B74B9C /* ZCCircleTimerView.swift in Sources */,
+				B9533702201985C400B74B9C /* ZCBaseNavigationViewController.swift in Sources */,
+				B9773C5A2019C2AA00C137A0 /* ZCAccount.swift in Sources */,
 				B95336EC201746D900B74B9C /* ZCAdManager.swift in Sources */,
 				B95336F12017596F00B74B9C /* ZCAccountManager.swift in Sources */,
 				B95336E9201744FE00B74B9C /* ZCAppControllerManager.swift in Sources */,
 				B95336E32017368B00B74B9C /* ZCAdViewController.swift in Sources */,
 				B95336F5201825AD00B74B9C /* ZCSystemInfoTool.swift in Sources */,
 				B95336DD2017329300B74B9C /* ZCBaseViewController.swift in Sources */,
+				B95337002019850A00B74B9C /* ZCMainViewController.swift in Sources */,
+				B953370A2019A41F00B74B9C /* ZCMyViewController.swift in Sources */,
 				B95336DF201732DC00B74B9C /* ZCLoginViewController.swift in Sources */,
 				B95336F92018568000B74B9C /* UIImageView+ZCCache.swift in Sources */,
+				B9773C5D2019DAD200C137A0 /* UIView+ZCHud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,15 +772,46 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 55ZX76FW78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiaoShowSwift/Frameworks",
+				);
 				INFOPLIST_FILE = MiaoShowSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwift;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Cache\"",
+					"-framework",
+					"\"HandyJSON\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-fobjc-arc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zclemo.miaoshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bea50b63-741f-40db-bf79-6485c4fb3f73";
 				PROVISIONING_PROFILE_SPECIFIER = dev_provision_all;
+				SWIFT_OBJC_BRIDGING_HEADER = "MiaoShowSwift/MiaoShowSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -665,15 +823,45 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 55ZX76FW78;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MiaoShowSwift/Frameworks",
+				);
 				INFOPLIST_FILE = MiaoShowSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = leadbank.MiaoShowSwift;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Cache\"",
+					"-framework",
+					"\"HandyJSON\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-fobjc-arc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zclemo.miaoshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bea50b63-741f-40db-bf79-6485c4fb3f73";
 				PROVISIONING_PROFILE_SPECIFIER = dev_provision_all;
+				SWIFT_OBJC_BRIDGING_HEADER = "MiaoShowSwift/MiaoShowSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

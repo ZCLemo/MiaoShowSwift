@@ -9,7 +9,6 @@
 import UIKit
 
 class ZCLoginViewController: ZCBaseViewController {
-
     
     //MARK: LifeCycle
     
@@ -32,12 +31,26 @@ class ZCLoginViewController: ZCBaseViewController {
             $0.bottom.equalTo(self.view).offset(-150)
             $0.left.right.equalTo(self.view)
         }
+        
+        view.addSubview(qqLoginBtn)
+        qqLoginBtn.snp.makeConstraints {
+            $0.centerX.equalTo(self.view)
+            $0.bottom.equalTo(self.view).offset(-60)
+            $0.size.equalTo(CGSize(width:60,height:60))
+        }
+    }
+    
+    @objc private func qqLoginBtnClick(){
+        
+        view.showWatting()
+        let permissions = [kOPEN_PERMISSION_GET_INFO,kOPEN_PERMISSION_GET_USER_INFO,kOPEN_PERMISSION_GET_SIMPLE_USER_INFO]
+        tencentOAuth.authorize(permissions)
     }
     
     //MARK: Lazy
     
     private lazy var backgroundImageV : UIImageView = {
-        let backgroundImageV = UIImageView.init(image: UIImage.init(named: "login_background.png"))
+        let backgroundImageV = UIImageView.init(image: UIImage.init(named: "login_background"))
         return backgroundImageV
     }()
     
@@ -50,5 +63,54 @@ class ZCLoginViewController: ZCBaseViewController {
         return tipLb
     }()
     
+    private lazy var qqLoginBtn : UIButton = {
+        let qqLoginBtn = UIButton.init(type: .custom)
+        qqLoginBtn.setImage(UIImage.init(named: "login_qq"), for: .normal)
+        qqLoginBtn.addTarget(self, action: #selector(qqLoginBtnClick), for: .touchUpInside)
+        return qqLoginBtn
+    }()
+    
+    private lazy var tencentOAuth : TencentOAuth = {
+        let tencentOAuth = TencentOAuth.init(appId: "1106703376", andDelegate: self)
+        return tencentOAuth!
+    }()
+    
+}
+
+
+// MARK: - TencentSessionDelegate
+extension ZCLoginViewController : TencentSessionDelegate{
+    func tencentDidLogin() {
+        self.tencentOAuth.getUserInfo()
+    }
+    
+    func tencentDidNotLogin(_ cancelled: Bool) {
+        self.view.showToast(text: cancelled ? "用户取消登录" : "登录失败")
+        
+    }
+    
+    func tencentDidNotNetWork() {
+        self.view.showToast(text: "网络异常")
+    }
+    
+    func getUserInfoResponse(_ response: APIResponse!) {
+        
+        view.hiddenWatting()
+        
+        if response != nil && response.retCode == Int32(URLREQUEST_SUCCEED.rawValue) {
+            
+            let userInfo = response.jsonResponse
+            let account = ZCAccount()
+            account.nickname = userInfo?["nickname"] as? String
+            account.gender = userInfo?["gender"] as? String
+            account.figureurl = userInfo?["figureurl"] as? String
+            
+            ZCAccountManager.sharedInstance().saveAccount(account: account)
+            ZCAppControllerManager.sharedInstanced().setUpRoot()
+            
+        }else{
+            print(response.errorMsg)
+        }
+    }
     
 }

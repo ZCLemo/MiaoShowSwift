@@ -75,6 +75,9 @@ class ZCAdViewController: ZCBaseViewController {
     
     private lazy var circleView : ZCCircleTimerView = {
         let circleView = ZCCircleTimerView()
+        circleView.backgroundColor = UIColor.red
+        circleView.layer.cornerRadius = 25
+        circleView.clipsToBounds = true
         return circleView
     }()
     
