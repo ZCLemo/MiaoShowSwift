@@ -13,6 +13,10 @@ class ZCBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
+        edgesForExtendedLayout = []
+        navigationController?.navigationBar.isTranslucent = false
+        automaticallyAdjustsScrollViewInsets = false
+        tabBarController?.tabBar.isTranslucent = false
     }
 }
