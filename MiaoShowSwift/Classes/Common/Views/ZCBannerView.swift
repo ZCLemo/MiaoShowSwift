@@ -165,6 +165,7 @@ extension ZCBannerView{
         if count > 1 {
             invalidateTimer()
             timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(timerLoop), userInfo: nil, repeats: true)
+            RunLoop.current.add(timer!, forMode: .commonModes)
         }
         
     }

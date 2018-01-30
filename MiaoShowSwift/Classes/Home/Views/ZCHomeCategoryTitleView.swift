@@ -93,6 +93,13 @@ class ZCHomeCategoryTitleView: UIView {
             $0.bottom.equalTo(self)
             $0.size.equalTo(CGSize(width:50,height:2))
         }
+        
+        
+        addSubview(lineView)
+        lineView.snp.makeConstraints {
+            $0.left.right.bottom.equalTo(self)
+            $0.height.equalTo(0.5)
+        }
     }
     
     
@@ -134,7 +141,14 @@ class ZCHomeCategoryTitleView: UIView {
         slider.backgroundColor = UIColor.red
         return slider
     }()
-
+    
+    
+    /// 分割线
+    private lazy var lineView : UIView = {
+        let lineView = UIView()
+        lineView.backgroundColor = UIColor.lightGray
+        return lineView
+    }()
 }
 
 // MARK: - 对外暴露的方法

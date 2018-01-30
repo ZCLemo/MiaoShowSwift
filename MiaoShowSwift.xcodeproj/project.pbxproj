@@ -50,6 +50,8 @@
 		B9802E19201F1B20001A871E /* ZCBaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E18201F1B20001A871E /* ZCBaseResponseModel.swift */; };
 		B9802E1C201F1C33001A871E /* ZCLiveListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E1B201F1C33001A871E /* ZCLiveListModel.swift */; };
 		B9802E1E201F2A74001A871E /* ZCBannerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E1D201F2A74001A871E /* ZCBannerListModel.swift */; };
+		B9802E2020204497001A871E /* ZCHotLiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E1F20204497001A871E /* ZCHotLiveCollectionViewCell.swift */; };
+		B9802E2520206034001A871E /* UIScrollView+ZCRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		B9802E18201F1B20001A871E /* ZCBaseResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCBaseResponseModel.swift; sourceTree = "<group>"; };
 		B9802E1B201F1C33001A871E /* ZCLiveListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveListModel.swift; sourceTree = "<group>"; };
 		B9802E1D201F2A74001A871E /* ZCBannerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBannerListModel.swift; sourceTree = "<group>"; };
+		B9802E1F20204497001A871E /* ZCHotLiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHotLiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZCRefresh.swift"; sourceTree = "<group>"; };
 		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -353,6 +357,7 @@
 		B95336F62018562500B74B9C /* UIFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				B9802E2220205FD2001A871E /* UIScrollView */,
 				B9773C5B2019DA0F00C137A0 /* UIView */,
 				B95336F72018563B00B74B9C /* UIImageView */,
 			);
@@ -450,6 +455,7 @@
 			children = (
 				B9773C61201AC5D800C137A0 /* ZCHomeCategoryTitleView.swift */,
 				B9802E02201B22D5001A871E /* ZCHotBannerCollectionViewCell.swift */,
+				B9802E1F20204497001A871E /* ZCHotLiveCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -503,6 +509,22 @@
 				B9802E1D201F2A74001A871E /* ZCBannerListModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B9802E2220205FD2001A871E /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B9802E2320205FE4001A871E /* Refresh */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		B9802E2320205FE4001A871E /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */,
+			);
+			path = Refresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -694,6 +716,7 @@
 				B9533707201987B200B74B9C /* ZCHomeViewController.swift in Sources */,
 				B95336FC20185E9500B74B9C /* ZCCircleTimerView.swift in Sources */,
 				B9533702201985C400B74B9C /* ZCBaseNavigationViewController.swift in Sources */,
+				B9802E2020204497001A871E /* ZCHotLiveCollectionViewCell.swift in Sources */,
 				B9773C5A2019C2AA00C137A0 /* ZCAccount.swift in Sources */,
 				B9802DF4201B056C001A871E /* ZCHotViewController.swift in Sources */,
 				B95336EC201746D900B74B9C /* ZCAdManager.swift in Sources */,
@@ -711,6 +734,7 @@
 				B9802DF6201B0581001A871E /* ZCNewestViewController.swift in Sources */,
 				B9802E10201F13F9001A871E /* ZCApiServiceManager.swift in Sources */,
 				B953370A2019A41F00B74B9C /* ZCMyViewController.swift in Sources */,
+				B9802E2520206034001A871E /* UIScrollView+ZCRefresh.swift in Sources */,
 				B95336DF201732DC00B74B9C /* ZCLoginViewController.swift in Sources */,
 				B9802E01201B1636001A871E /* UIView+ZCFrame.swift in Sources */,
 				B9773C62201AC5D800C137A0 /* ZCHomeCategoryTitleView.swift in Sources */,

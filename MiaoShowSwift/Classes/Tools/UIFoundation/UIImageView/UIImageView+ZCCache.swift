@@ -13,15 +13,7 @@ extension UIImageView{
     
     func zc_setImage(urlStr:String?,placeHolderImage:UIImage?){
         
-        guard let urlStr = urlStr else {
-            return
-        }
-        
-        guard let url = URL(string:urlStr) else {
-            return
-        }
-        
-        kf.setImage(with: url, placeholder: placeHolderImage, options: nil, progressBlock: nil, completionHandler: nil)
+        kf.setImage(with: urlStr==nil ? nil : URL(string:urlStr!) , placeholder: placeHolderImage, options: nil, progressBlock: nil, completionHandler: nil)
     }
     
 }

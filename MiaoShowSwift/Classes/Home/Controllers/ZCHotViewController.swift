@@ -11,15 +11,20 @@ import UIKit
 class ZCHotViewController: ZCBaseViewController {
 
     let hotBannerCollectionViewCellId = "hotBannerCollectionViewCellId"
+    let hotLiveCollectionViewCellId = "hotLiveCollectionViewCellId"
+    
+    let dGroup = DispatchGroup()
     
     var hotDatasource : ZCLiveListModel?
+    
+    var bannerDatasource : ZCBannerListModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         createUI()
-//        requestBanner()
-        requestHotList()
+        collectionView.beginHeaderRefreshing()
+        
     }
     
     //MARK: Pravite
@@ -31,42 +36,74 @@ class ZCHotViewController: ZCBaseViewController {
         }
     }
     
+    
+    /// 查询数据
+    private func requestData(){
+        requestBanner()
+        requestHotList()
+        notifyRequsetEnd()
+    }
+    
+    /// 查询广告
     private func requestBanner(){
+        dGroup.enter()
         let serviceM = ZCApiServiceManager<ZCApiService>()
         let _ = serviceM.request(ZCApiService.getAD, model: ZCBannerListModel.self) { [weak self] (success, errorDesc, model) in
             
+            self?.dGroup.leave()
             if !success {
                 self?.view.showToast(text: errorDesc)
                 return
             }
-            
+            self?.bannerDatasource = model
         }
+        
     }
     
+    /// 直播列表
     private func requestHotList(){
         let serviceM = ZCApiServiceManager<ZCApiService>()
+        dGroup.enter()
         let _ = serviceM.request(ZCApiService.hotLive(page: 1), model: ZCLiveListModel.self) { [weak self] (success, errorDesc, model) in
             
+            self?.dGroup.leave()
             if !success {
                 self?.view.showToast(text: errorDesc)
                 return
             }
-            
             self?.hotDatasource = model
-            self?.collectionView.reloadData()
+        }
+        
+    }
+    
+    private func notifyRequsetEnd(){
+        dGroup.notify(queue: DispatchQueue.main) {
+            self.collectionView.endRefresh()
+            self.collectionView.reloadData()
         }
     }
 
     //MARK: Lazy
     private lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
+        layout.minimumLineSpacing = 5
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ZCHotBannerCollectionViewCell.self, forCellWithReuseIdentifier: hotBannerCollectionViewCellId)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(ZCHotLiveCollectionViewCell.self, forCellWithReuseIdentifier: hotLiveCollectionViewCellId)
+        
+        collectionView.headerRefresh { [weak self] in
+            self?.requestData()
+        }
+        
+//        collectionView.footerRefresh {
+//            [weak self] in
+//
+//        }
+        
         return collectionView
     }()
 }
@@ -87,12 +124,13 @@ extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.section == 0 {
+        if indexPath.section==0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hotBannerCollectionViewCellId, for: indexPath) as! ZCHotBannerCollectionViewCell
+            cell.bannerList = self.bannerDatasource?.customData
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-        cell.backgroundColor = UIColor.blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hotLiveCollectionViewCellId, for: indexPath) as! ZCHotLiveCollectionViewCell
+        cell.hotLive = self.hotDatasource?.list?[indexPath.row]
         return cell
     }
     
@@ -100,7 +138,7 @@ extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSou
         if indexPath.section == 0 {
             return CGSize(width:kScreenWidth,height:ZCHotBannerCollectionViewCell.cellHeight())
         }
-        return CGSize(width:kScreenWidth,height:400)
+        return CGSize(width:kScreenWidth,height:ZCHotLiveCollectionViewCell.cellHeight())
     }
     
 }

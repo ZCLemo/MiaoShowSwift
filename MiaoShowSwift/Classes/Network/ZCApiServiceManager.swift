@@ -75,14 +75,28 @@ class ZCApiServiceManager<Target : TargetType> {
 }
 
 extension Response {
+    
     func mapModel<T: HandyJSON>(_type: T.Type) throws -> T{
         
-        let jsonString = String(data: data, encoding: .utf8)
+        let json = try? JSONSerialization.jsonObject(with: data, options: [])
         
-        guard let model = JSONDeserializer<T>.deserializeFrom(json: jsonString) else {
+        var dict : [String : Any] = [:]
+        
+        if json != nil {
+            let jsonDict = json as! [String : Any]
+            dict = jsonDict
+            let data = jsonDict["data"]
+            //json里的data数据类型不统一，所以我自己包了一层。如果data数据类型不是字典统一把data组装成字典，key的名字就定义成“customData”,便于解析。所以一般在新项目中，刚开始就要和网关约定好数据类型格式，统一的键对应的值的类型要统一
+            if (data as? Dictionary<String, Any>) == nil{
+                var  dataDict : [String : Any] = [:]
+                dataDict["customData"] = data
+                dict["data"] = dataDict
+            }
+        }
+        
+        guard let model = JSONDeserializer<T>.deserializeFrom(dict: dict) else{
             throw MoyaError.jsonMapping(self)
         }
         return model
-        
     }
 }
