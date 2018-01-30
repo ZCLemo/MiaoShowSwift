@@ -12,10 +12,14 @@ class ZCHotViewController: ZCBaseViewController {
 
     let hotBannerCollectionViewCellId = "hotBannerCollectionViewCellId"
     
+    var hotDatasource : ZCLiveListModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         createUI()
+//        requestBanner()
+        requestHotList()
     }
     
     //MARK: Pravite
@@ -24,6 +28,32 @@ class ZCHotViewController: ZCBaseViewController {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
             $0.edges.equalTo(self.view)
+        }
+    }
+    
+    private func requestBanner(){
+        let serviceM = ZCApiServiceManager<ZCApiService>()
+        let _ = serviceM.request(ZCApiService.getAD, model: ZCBannerListModel.self) { [weak self] (success, errorDesc, model) in
+            
+            if !success {
+                self?.view.showToast(text: errorDesc)
+                return
+            }
+            
+        }
+    }
+    
+    private func requestHotList(){
+        let serviceM = ZCApiServiceManager<ZCApiService>()
+        let _ = serviceM.request(ZCApiService.hotLive(page: 1), model: ZCLiveListModel.self) { [weak self] (success, errorDesc, model) in
+            
+            if !success {
+                self?.view.showToast(text: errorDesc)
+                return
+            }
+            
+            self?.hotDatasource = model
+            self?.collectionView.reloadData()
         }
     }
 
@@ -41,16 +71,18 @@ class ZCHotViewController: ZCBaseViewController {
     }()
 }
 
-
 // MARK: -UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        if section == 0 {
+            return 1
+        }
+        return self.hotDatasource?.list?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

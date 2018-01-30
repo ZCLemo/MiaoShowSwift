@@ -44,6 +44,12 @@
 		B9802E03201B22D5001A871E /* ZCHotBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E02201B22D5001A871E /* ZCHotBannerCollectionViewCell.swift */; };
 		B9802E09201B2CFE001A871E /* ZCBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E08201B2CFE001A871E /* ZCBannerView.swift */; };
 		B9802E0B201F0A3E001A871E /* ZCAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E0A201F0A3E001A871E /* ZCAttentionViewController.swift */; };
+		B9802E0E201F0EF4001A871E /* ZCApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E0D201F0EF4001A871E /* ZCApiService.swift */; };
+		B9802E10201F13F9001A871E /* ZCApiServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E0F201F13F9001A871E /* ZCApiServiceManager.swift */; };
+		B9802E12201F160C001A871E /* NetworkLoggerPlugin+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E11201F160C001A871E /* NetworkLoggerPlugin+Extension.swift */; };
+		B9802E19201F1B20001A871E /* ZCBaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E18201F1B20001A871E /* ZCBaseResponseModel.swift */; };
+		B9802E1C201F1C33001A871E /* ZCLiveListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E1B201F1C33001A871E /* ZCLiveListModel.swift */; };
+		B9802E1E201F2A74001A871E /* ZCBannerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E1D201F2A74001A871E /* ZCBannerListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,12 @@
 		B9802E02201B22D5001A871E /* ZCHotBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHotBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9802E08201B2CFE001A871E /* ZCBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBannerView.swift; sourceTree = "<group>"; };
 		B9802E0A201F0A3E001A871E /* ZCAttentionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAttentionViewController.swift; sourceTree = "<group>"; };
+		B9802E0D201F0EF4001A871E /* ZCApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCApiService.swift; sourceTree = "<group>"; };
+		B9802E0F201F13F9001A871E /* ZCApiServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCApiServiceManager.swift; sourceTree = "<group>"; };
+		B9802E11201F160C001A871E /* NetworkLoggerPlugin+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkLoggerPlugin+Extension.swift"; sourceTree = "<group>"; };
+		B9802E18201F1B20001A871E /* ZCBaseResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCBaseResponseModel.swift; sourceTree = "<group>"; };
+		B9802E1B201F1C33001A871E /* ZCLiveListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveListModel.swift; sourceTree = "<group>"; };
+		B9802E1D201F2A74001A871E /* ZCBannerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBannerListModel.swift; sourceTree = "<group>"; };
 		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -227,6 +239,7 @@
 		B95336D520172DAC00B74B9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B9802E0C201F0ED8001A871E /* Network */,
 				B9802E04201B29DE001A871E /* Common */,
 				B9802DFD201B08B1001A871E /* Defines */,
 				B95336F22018253900B74B9C /* Tools */,
@@ -261,8 +274,7 @@
 		B95336D82017324A00B74B9C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B95336DB2017326C00B74B9C /* Models */,
-				B95336DA2017326600B74B9C /* Views */,
+				B9802E17201F1B04001A871E /* Models */,
 				B95336D92017325B00B74B9C /* Controllers */,
 			);
 			path = Base;
@@ -275,20 +287,6 @@
 				B9533701201985C400B74B9C /* ZCBaseNavigationViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		B95336DA2017326600B74B9C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B95336DB2017326C00B74B9C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		B95336E02017365200B74B9C /* AD */ = {
@@ -396,6 +394,7 @@
 		B95337032019874A00B74B9C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B9802E1A201F1B80001A871E /* Models */,
 				B9773C60201AC4CF00C137A0 /* Views */,
 				B9533708201987E800B74B9C /* Controllers */,
 			);
@@ -477,6 +476,33 @@
 				B9802E08201B2CFE001A871E /* ZCBannerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B9802E0C201F0ED8001A871E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B9802E0D201F0EF4001A871E /* ZCApiService.swift */,
+				B9802E0F201F13F9001A871E /* ZCApiServiceManager.swift */,
+				B9802E11201F160C001A871E /* NetworkLoggerPlugin+Extension.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B9802E17201F1B04001A871E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9802E18201F1B20001A871E /* ZCBaseResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9802E1A201F1B80001A871E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9802E1B201F1C33001A871E /* ZCLiveListModel.swift */,
+				B9802E1D201F2A74001A871E /* ZCBannerListModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -672,19 +698,25 @@
 				B9802DF4201B056C001A871E /* ZCHotViewController.swift in Sources */,
 				B95336EC201746D900B74B9C /* ZCAdManager.swift in Sources */,
 				B95336F12017596F00B74B9C /* ZCAccountManager.swift in Sources */,
+				B9802E1E201F2A74001A871E /* ZCBannerListModel.swift in Sources */,
 				B95336E9201744FE00B74B9C /* ZCAppControllerManager.swift in Sources */,
+				B9802E1C201F1C33001A871E /* ZCLiveListModel.swift in Sources */,
 				B95336E32017368B00B74B9C /* ZCAdViewController.swift in Sources */,
 				B95336F5201825AD00B74B9C /* ZCSystemInfoTool.swift in Sources */,
+				B9802E0E201F0EF4001A871E /* ZCApiService.swift in Sources */,
 				B95336DD2017329300B74B9C /* ZCBaseViewController.swift in Sources */,
 				B9802E0B201F0A3E001A871E /* ZCAttentionViewController.swift in Sources */,
 				B9802E09201B2CFE001A871E /* ZCBannerView.swift in Sources */,
 				B95337002019850A00B74B9C /* ZCMainViewController.swift in Sources */,
 				B9802DF6201B0581001A871E /* ZCNewestViewController.swift in Sources */,
+				B9802E10201F13F9001A871E /* ZCApiServiceManager.swift in Sources */,
 				B953370A2019A41F00B74B9C /* ZCMyViewController.swift in Sources */,
 				B95336DF201732DC00B74B9C /* ZCLoginViewController.swift in Sources */,
 				B9802E01201B1636001A871E /* UIView+ZCFrame.swift in Sources */,
 				B9773C62201AC5D800C137A0 /* ZCHomeCategoryTitleView.swift in Sources */,
 				B95336F92018568000B74B9C /* UIImageView+ZCCache.swift in Sources */,
+				B9802E12201F160C001A871E /* NetworkLoggerPlugin+Extension.swift in Sources */,
+				B9802E19201F1B20001A871E /* ZCBaseResponseModel.swift in Sources */,
 				B9773C5D2019DAD200C137A0 /* UIView+ZCHud.swift in Sources */,
 				B9802DFF201B08D3001A871E /* CommonDefine.swift in Sources */,
 				B9802E03201B22D5001A871E /* ZCHotBannerCollectionViewCell.swift in Sources */,
