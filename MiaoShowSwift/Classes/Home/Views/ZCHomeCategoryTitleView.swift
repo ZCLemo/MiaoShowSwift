@@ -35,6 +35,8 @@ class ZCHomeCategoryTitleView: UIView {
     init(titles:[String]?){
         super.init(frame: .zero)
         
+        backgroundColor = UIColor.white
+        
         normalColor = UIColor.lightGray
         selectedColor = UIColor.red
         textFont = UIFont.systemFont(ofSize: 15)

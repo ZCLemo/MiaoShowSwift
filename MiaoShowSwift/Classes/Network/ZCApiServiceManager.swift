@@ -21,14 +21,15 @@ class ZCApiServiceManager<Target : TargetType> {
     var apiService : MoyaProvider<ZCApiService>!
     
     init(){
-        let currentClientNO = getClientNO()
-        apiService = MoyaProvider<ZCApiService>(plugins:[NetworkLoggerPlugin.init(verbose: true, cURL: false, output: nil, requestDataFormatter: { (data) in
-            return NetworkLoggerPlugin.requestDataFormmatter(requestPatameters: apiRequestPatameters,clientNO:  currentClientNO)
-            
-        }, responseDataFormatter: {
-            (data) in
-            return NetworkLoggerPlugin.responseDataFormmatter(responseData: data,clientNO: currentClientNO)
-        })])
+//        let currentClientNO = getClientNO()
+        apiService = MoyaProvider<ZCApiService>()
+//        apiService = MoyaProvider<ZCApiService>(plugins:[NetworkLoggerPlugin.init(verbose: true, cURL: false, output: nil, requestDataFormatter: { (data) in
+//            return NetworkLoggerPlugin.requestDataFormmatter(requestPatameters: apiRequestPatameters,clientNO:  currentClientNO)
+//
+//        }, responseDataFormatter: {
+//            (data) in
+//            return NetworkLoggerPlugin.responseDataFormmatter(responseData: data,clientNO: currentClientNO)
+//        })])
         
     }
     

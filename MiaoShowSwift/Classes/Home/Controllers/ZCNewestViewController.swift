@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZCNewestViewController: ZCBaseViewController {
+class ZCNewestViewController: ZCAnimateNavAndTabViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

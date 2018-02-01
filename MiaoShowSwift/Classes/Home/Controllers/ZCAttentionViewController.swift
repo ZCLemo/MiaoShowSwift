@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZCAttentionViewController: ZCBaseViewController {
+class ZCAttentionViewController: ZCAnimateNavAndTabViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

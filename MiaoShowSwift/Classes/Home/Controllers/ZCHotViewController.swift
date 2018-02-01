@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZCHotViewController: ZCBaseViewController {
+class ZCHotViewController: ZCAnimateNavAndTabViewController {
 
     let hotBannerCollectionViewCellId = "hotBannerCollectionViewCellId"
     let hotLiveCollectionViewCellId = "hotLiveCollectionViewCellId"
@@ -76,6 +76,7 @@ class ZCHotViewController: ZCBaseViewController {
         
     }
     
+    /// 请求结束
     private func notifyRequsetEnd(){
         dGroup.notify(queue: DispatchQueue.main) {
             self.collectionView.endRefresh()
@@ -89,6 +90,7 @@ class ZCHotViewController: ZCBaseViewController {
         layout.minimumLineSpacing = 5
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.contentInset = UIEdgeInsets.init(top: homeTitleViewHeight, left: 0, bottom: 0, right: 0)
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -142,3 +144,5 @@ extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSou
     }
     
 }
+
+

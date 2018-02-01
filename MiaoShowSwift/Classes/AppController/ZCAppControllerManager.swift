@@ -46,10 +46,6 @@ class ZCAppControllerManager {
     
     /// 加载主页
     private func setUpMain(){
-//        UIView.transition(with: keyWindow(), duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: {
-//            
-//        }, completion: nil)
-        
         let mainVC = ZCMainViewController()
         keyWindow().rootViewController = mainVC
         keyWindow().makeKeyAndVisible()
@@ -60,4 +56,5 @@ class ZCAppControllerManager {
         return appDelegate.window!
     }
     
+
 }

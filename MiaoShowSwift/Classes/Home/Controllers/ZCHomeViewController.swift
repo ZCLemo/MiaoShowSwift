@@ -8,11 +8,11 @@
 
 import UIKit
 
+let homeTitleViewHeight : CGFloat = 50
+
 class ZCHomeViewController: ZCBaseViewController {
     
     private let homeCollectionCellId = "homeCollectionCellId"
-    
-    private let titleViewHeight : CGFloat = 50
     
     private var childVCs : [UIViewController]!
 
@@ -20,6 +20,8 @@ class ZCHomeViewController: ZCBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        automaticallyAdjustsScrollViewInsets = false
         
         childVCs = [ZCHotViewController(),ZCNewestViewController(),ZCAttentionViewController()]
         for childViewController in childVCs {
@@ -31,23 +33,23 @@ class ZCHomeViewController: ZCBaseViewController {
     }
 
     private func createUI(){
-        view.addSubview(titleView)
-        titleView.snp.makeConstraints {
-            $0.top.left.right.equalTo(self.view)
-            $0.height.equalTo(titleViewHeight)
-        }
         
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(titleView.snp.bottom)
+            $0.edges.equalTo(self.view)
+        }
+        
+        view.addSubview(titleView)
+        titleView.snp.makeConstraints {
+            $0.top.equalTo(self.view).offset(kNavigationBarHeight)
             $0.left.right.equalTo(self.view)
-            $0.bottom.equalTo(self.view).offset(kTabbarHeight)
+            $0.height.equalTo(homeTitleViewHeight)
         }
     }
     
     //MARK: Lazy
     
-    private lazy var titleView : ZCHomeCategoryTitleView = {
+    lazy var titleView : ZCHomeCategoryTitleView = {
         let titleView = ZCHomeCategoryTitleView.init(titles: ["热门","最新","关注"])
         titleView.titleViewClickClosure = { [unowned self]
             (selecetedIndex) in
@@ -59,17 +61,17 @@ class ZCHomeViewController: ZCBaseViewController {
     
     private lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
-        layout.itemSize = CGSize(width:kScreenWidth,height:kScreenHeight - kNavigationBarHeight - titleViewHeight)
+        layout.itemSize = CGSize.init(width: kScreenWidth, height: kScreenHeight)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
-        
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.bounces = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.white
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: homeCollectionCellId)
         return collectionView
     }()
@@ -93,7 +95,6 @@ extension ZCHomeViewController : UICollectionViewDelegate,UICollectionViewDataSo
         let childVC = childVCs[indexPath.row]
         childVC.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVC.view)
-        
         return cell
     }
 }
@@ -122,3 +123,4 @@ extension ZCHomeViewController : UIScrollViewDelegate{
         titleView.selectedIndex = index
     }
 }
+

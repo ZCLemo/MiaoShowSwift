@@ -14,9 +14,8 @@ class ZCBaseViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.white
-        edgesForExtendedLayout = []
-        navigationController?.navigationBar.isTranslucent = false
-        automaticallyAdjustsScrollViewInsets = false
-        tabBarController?.tabBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = UIColor.rgbColor(red: 254, green: 95, blue: 154)
+        UIApplication.shared.statusBarStyle = .lightContent
+        
     }
 }
