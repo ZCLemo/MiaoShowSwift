@@ -11,8 +11,9 @@ import Moya
 
 
 enum ZCApiService {
-    case hotLive(page:UInt)
+    case hotLive(page:Int)
     case getAD
+    case newestLive(page:Int)
 }
 
 extension ZCApiService : TargetType{
@@ -27,6 +28,9 @@ extension ZCApiService : TargetType{
             
         case .getAD:
             return "Living/GetAD"
+            
+        case .newestLive:
+            return "Room/GetNewRoomOnline"
         }
     }
     
@@ -47,6 +51,9 @@ extension ZCApiService : TargetType{
             
         case .getAD:
             break
+            
+        case .newestLive(let page) :
+            parmeters["page"] = page
         }
 
         apiRequestPatameters = parmeters

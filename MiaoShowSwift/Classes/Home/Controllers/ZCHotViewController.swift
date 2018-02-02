@@ -90,8 +90,8 @@ class ZCHotViewController: ZCAnimateNavAndTabViewController {
         layout.minimumLineSpacing = 5
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets.init(top: homeTitleViewHeight, left: 0, bottom: 0, right: 0)
-        collectionView.backgroundColor = UIColor.white
+        collectionView.contentInset = UIEdgeInsets.init(top: homeTitleViewHeight, left: 0, bottom: -kTabbarHeight, right: 0)
+        collectionView.backgroundColor = UIColor.colorFormHex(hexValue: 0xf0f0f0)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ZCHotBannerCollectionViewCell.self, forCellWithReuseIdentifier: hotBannerCollectionViewCellId)

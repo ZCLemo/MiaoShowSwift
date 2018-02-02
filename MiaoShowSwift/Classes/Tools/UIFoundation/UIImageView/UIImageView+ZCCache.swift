@@ -16,4 +16,8 @@ extension UIImageView{
         kf.setImage(with: urlStr==nil ? nil : URL(string:urlStr!) , placeholder: placeHolderImage, options: nil, progressBlock: nil, completionHandler: nil)
     }
     
+    func zc_setImage(urlStr:String?,placeHolderImage:UIImage?,completionHandler: CompletionHandler? = nil){
+        kf.setImage(with: urlStr==nil ? nil : URL(string:urlStr!) , placeholder: placeHolderImage, options: nil, progressBlock: nil, completionHandler: completionHandler)
+    }
+    
 }

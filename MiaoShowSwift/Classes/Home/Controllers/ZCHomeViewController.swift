@@ -23,7 +23,7 @@ class ZCHomeViewController: ZCBaseViewController {
         
         automaticallyAdjustsScrollViewInsets = false
         
-        childVCs = [ZCHotViewController(),ZCNewestViewController(),ZCAttentionViewController()]
+        childVCs = [ZCHotViewController(),ZCNewestViewController(),ZCShortVideosViewController(),ZCGameViewController(),ZCActivityViewController()]
         for childViewController in childVCs {
             addChildViewController(childViewController)
         }
@@ -50,7 +50,7 @@ class ZCHomeViewController: ZCBaseViewController {
     //MARK: Lazy
     
     lazy var titleView : ZCHomeCategoryTitleView = {
-        let titleView = ZCHomeCategoryTitleView.init(titles: ["热门","最新","关注"])
+        let titleView = ZCHomeCategoryTitleView.init(titles: ["热门","最新","短视频","游戏","活动"])
         titleView.titleViewClickClosure = { [unowned self]
             (selecetedIndex) in
             self.collectionView.setContentOffset(CGPoint(x:kScreenWidth*CGFloat(selecetedIndex),y:0), animated: true)

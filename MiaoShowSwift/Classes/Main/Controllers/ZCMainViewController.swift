@@ -15,21 +15,30 @@ class ZCMainViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         setup()
+        
+        tabBar.tintColor = UIColor.rgbColor(red: 254, green: 95, blue: 154)
     }
     
     private func setup(){
-        addChildViewControllerWithImageName(childViewController: ZCHomeViewController(), imageName: "toolbar_home")
-        addChildViewControllerWithImageName(childViewController: UIViewController(), imageName: "toolbar_live")
+        addChildViewControllerWithImageName(childViewController: ZCHomeViewController(), imageName: "toolbar_home",title: "广场")
         
-        addChildViewControllerWithImageName(childViewController: ZCMyViewController(), imageName: "toolbar_me")
+           addChildViewControllerWithImageName(childViewController: ZCAttentionViewController(), imageName: "toolbar_follow",title: "关注")
+        addChildViewControllerWithImageName(childViewController: UIViewController(), imageName: "toolbar_live",title: "")
+        
+        addChildViewControllerWithImageName(childViewController: ZCLiveRankViewController(), imageName: "toolbar_rank",title: "排行")
+        
+        addChildViewControllerWithImageName(childViewController: ZCMyViewController(), imageName: "toolbar_me",title: "我的")
         
     }
     
-    private func addChildViewControllerWithImageName(childViewController:UIViewController!,imageName:String!){
-        let nav = ZCBaseNavigationViewController.init(rootViewController: childViewController)
-        childViewController.tabBarItem.image = UIImage.init(named: imageName)
+    private func addChildViewControllerWithImageName(childViewController:UIViewController!,imageName:String!,title:String!){
+        let nav = ZCBaseNavigationViewController(rootViewController: childViewController)
+        childViewController.tabBarItem.image = UIImage(named: imageName)
+        childViewController.tabBarItem.title = title
         childViewController.tabBarItem.selectedImage = UIImage.init(named: imageName+"_sel")
-        childViewController.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+        if title.count == 0 {
+            childViewController.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+        }
         addChildViewController(nav)
     }
 
