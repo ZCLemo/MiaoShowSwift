@@ -10,23 +10,21 @@ import UIKit
 
 class ZCAppControllerManager {
 
-    static let manager = ZCAppControllerManager()
+    private static let manager = ZCAppControllerManager()
     class  func sharedInstanced() -> ZCAppControllerManager {
         return manager
     }
     
     /// 设置根控制器
     func setUpRoot(){
-//        if ZCAdManager.sharedInstance().showAd() {
-//            ZCAdManager.sharedInstance().shownAd = true
-//            setUpAd()
-//        }else if !ZCAccountManager.sharedInstance().isLogin(){
-//            setUpLogin()
-//        }else{
-//            setUpMain()
-//        }
-        
-        setUpMain()
+        if ZCAdManager.sharedInstance().showAd() {
+            ZCAdManager.sharedInstance().shownAd = true
+            setUpAd()
+        }else if !ZCAccountManager.sharedInstance().isLogin(){
+            setUpLogin()
+        }else{
+            setUpMain()
+        }
     }
     
     

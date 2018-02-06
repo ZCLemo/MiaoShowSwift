@@ -7,6 +7,7 @@
 //  登录页面
 
 import UIKit
+import HandyJSON
 
 class ZCLoginViewController: ZCBaseViewController {
     
@@ -43,7 +44,7 @@ class ZCLoginViewController: ZCBaseViewController {
     @objc private func qqLoginBtnClick(){
         
         view.showWatting()
-        let permissions = [kOPEN_PERMISSION_GET_INFO,kOPEN_PERMISSION_GET_USER_INFO,kOPEN_PERMISSION_GET_SIMPLE_USER_INFO]
+        let permissions = [kOPEN_PERMISSION_GET_INFO,kOPEN_PERMISSION_GET_USER_INFO,kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,kOPEN_PERMISSION_GET_INFO]
         tencentOAuth.authorize(permissions)
     }
     
@@ -99,14 +100,13 @@ extension ZCLoginViewController : TencentSessionDelegate{
         
         if response != nil && response.retCode == Int32(URLREQUEST_SUCCEED.rawValue) {
             
-            let userInfo = response.jsonResponse
-            let account = ZCAccount()
-            account.nickname = userInfo?["nickname"] as? String
-            account.gender = userInfo?["gender"] as? String
-            account.figureurl = userInfo?["figureurl"] as? String
+            let userInfo = response.jsonResponse as? [String : Any]
             
-            ZCAccountManager.sharedInstance().saveAccount(account: account)
-            ZCAppControllerManager.sharedInstanced().setUpRoot()
+            let account = JSONDeserializer<ZCAccount>.deserializeFrom(dict: userInfo)
+            if account != nil{
+                ZCAccountManager.sharedInstance().saveAccount(account: account!)
+                ZCAppControllerManager.sharedInstanced().setUpRoot()
+            }
             
         }else{
             print(response.errorMsg)

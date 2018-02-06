@@ -18,6 +18,10 @@
 		B90EBA132028026D00CA3EAC /* ZCTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA122028026D00CA3EAC /* ZCTabBarView.swift */; };
 		B90EBA17202833D600CA3EAC /* NString+ZCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA16202833D600CA3EAC /* NString+ZCExtension.swift */; };
 		B90EBA192028396C00CA3EAC /* ZCTabBarItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA182028396C00CA3EAC /* ZCTabBarItemButton.swift */; };
+		B90EBA1C2028584100CA3EAC /* ZCMyInformationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA1B2028584100CA3EAC /* ZCMyInformationHeaderView.swift */; };
+		B90EBA1E2029839600CA3EAC /* ZCMyInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA1D2029839600CA3EAC /* ZCMyInfoCell.swift */; };
+		B90EBA23202984BD00CA3EAC /* ZCMyInfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA22202984BD00CA3EAC /* ZCMyInfoCellModel.swift */; };
+		B90EBA27202986F800CA3EAC /* ZCMyInfoCellDataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EBA26202986F800CA3EAC /* ZCMyInfoCellDataSourceManager.swift */; };
 		B91AF9F6202404510049D996 /* ZCNewestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91AF9F5202404510049D996 /* ZCNewestCollectionViewCell.swift */; };
 		B91AF9F82024080B0049D996 /* ZCNewestListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91AF9F72024080B0049D996 /* ZCNewestListModel.swift */; };
 		B95336AD20172BD100B74B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95336AC20172BD100B74B9C /* Assets.xcassets */; };
@@ -97,6 +101,10 @@
 		B90EBA122028026D00CA3EAC /* ZCTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCTabBarView.swift; sourceTree = "<group>"; };
 		B90EBA16202833D600CA3EAC /* NString+ZCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NString+ZCExtension.swift"; sourceTree = "<group>"; };
 		B90EBA182028396C00CA3EAC /* ZCTabBarItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCTabBarItemButton.swift; sourceTree = "<group>"; };
+		B90EBA1B2028584100CA3EAC /* ZCMyInformationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyInformationHeaderView.swift; sourceTree = "<group>"; };
+		B90EBA1D2029839600CA3EAC /* ZCMyInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyInfoCell.swift; sourceTree = "<group>"; };
+		B90EBA22202984BD00CA3EAC /* ZCMyInfoCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCMyInfoCellModel.swift; sourceTree = "<group>"; };
+		B90EBA26202986F800CA3EAC /* ZCMyInfoCellDataSourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyInfoCellDataSourceManager.swift; sourceTree = "<group>"; };
 		B91AF9F5202404510049D996 /* ZCNewestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCNewestCollectionViewCell.swift; sourceTree = "<group>"; };
 		B91AF9F72024080B0049D996 /* ZCNewestListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCNewestListModel.swift; sourceTree = "<group>"; };
 		B95336A220172BD100B74B9C /* MiaoShowSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaoShowSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +263,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B90EBA1A2028582A00CA3EAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B90EBA1B2028584100CA3EAC /* ZCMyInformationHeaderView.swift */,
+				B90EBA1D2029839600CA3EAC /* ZCMyInfoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B90EBA212029849900CA3EAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B90EBA22202984BD00CA3EAC /* ZCMyInfoCellModel.swift */,
+				B90EBA26202986F800CA3EAC /* ZCMyInfoCellDataSourceManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B953369920172BD100B74B9C = {
 			isa = PBXGroup;
 			children = (
@@ -310,8 +336,8 @@
 		B95336D520172DAC00B74B9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B95336E52017448600B74B9C /* AppController */,
 				B95336F22018253900B74B9C /* Tools */,
+				B95336E52017448600B74B9C /* AppController */,
 				B9802DFD201B08B1001A871E /* Defines */,
 				B9802E04201B29DE001A871E /* Common */,
 				B9802E0C201F0ED8001A871E /* Network */,
@@ -482,6 +508,8 @@
 		B95337042019875300B74B9C /* My */ = {
 			isa = PBXGroup;
 			children = (
+				B90EBA212029849900CA3EAC /* Models */,
+				B90EBA1A2028582A00CA3EAC /* Views */,
 				B95337052019879700B74B9C /* Controllers */,
 			);
 			path = My;
@@ -793,6 +821,7 @@
 			files = (
 				B90EB9FF20244DE300CA3EAC /* ZCAttentionViewController.swift in Sources */,
 				B9802E29202090AE001A871E /* UIColor+ZCExtension.swift in Sources */,
+				B90EBA23202984BD00CA3EAC /* ZCMyInfoCellModel.swift in Sources */,
 				B95336E7201744B100B74B9C /* AppDelegate.swift in Sources */,
 				B9533707201987B200B74B9C /* ZCHomeViewController.swift in Sources */,
 				B95336FC20185E9500B74B9C /* ZCCircleTimerView.swift in Sources */,
@@ -802,12 +831,14 @@
 				B9802DF4201B056C001A871E /* ZCHotViewController.swift in Sources */,
 				B90EBA08202450DF00CA3EAC /* ZCLiveRankViewController.swift in Sources */,
 				B95336EC201746D900B74B9C /* ZCAdManager.swift in Sources */,
+				B90EBA27202986F800CA3EAC /* ZCMyInfoCellDataSourceManager.swift in Sources */,
 				B95336F12017596F00B74B9C /* ZCAccountManager.swift in Sources */,
 				B9802E1E201F2A74001A871E /* ZCBannerListModel.swift in Sources */,
 				B9A247FC2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift in Sources */,
 				B95336E9201744FE00B74B9C /* ZCAppControllerManager.swift in Sources */,
 				B9802E1C201F1C33001A871E /* ZCLiveListModel.swift in Sources */,
 				B95336E32017368B00B74B9C /* ZCAdViewController.swift in Sources */,
+				B90EBA1E2029839600CA3EAC /* ZCMyInfoCell.swift in Sources */,
 				B90EBA0C20245D2B00CA3EAC /* ZCEaseBlankPageView.swift in Sources */,
 				B95336F5201825AD00B74B9C /* ZCSystemInfoTool.swift in Sources */,
 				B9802E0E201F0EF4001A871E /* ZCApiService.swift in Sources */,
@@ -816,6 +847,7 @@
 				B95337002019850A00B74B9C /* ZCMainViewController.swift in Sources */,
 				B9802DF6201B0581001A871E /* ZCNewestViewController.swift in Sources */,
 				B9802E10201F13F9001A871E /* ZCApiServiceManager.swift in Sources */,
+				B90EBA1C2028584100CA3EAC /* ZCMyInformationHeaderView.swift in Sources */,
 				B953370A2019A41F00B74B9C /* ZCMyViewController.swift in Sources */,
 				B90EBA0120244E7E00CA3EAC /* ZCShortVideosViewController.swift in Sources */,
 				B90EBA192028396C00CA3EAC /* ZCTabBarItemButton.swift in Sources */,

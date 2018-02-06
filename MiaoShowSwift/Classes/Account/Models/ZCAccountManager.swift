@@ -10,7 +10,7 @@ import UIKit
 
 class ZCAccountManager: NSObject {
 
-    let accountKey = "accountKey"
+    private let accountKey = "accountKey"
     
     static let manager = ZCAccountManager()
     class func sharedInstance() -> ZCAccountManager{
