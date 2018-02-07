@@ -15,9 +15,11 @@ class ZCHotViewController: ZCAnimateNavAndTabViewController {
     
     let dGroup = DispatchGroup()
     
-    var hotDatasource : ZCLiveListModel?
+    var hotDatasource = [ZCLiveModel]()
     
-    var bannerDatasource : ZCBannerListModel?
+    var bannerDatasource =  [ZCBannerModel]()
+    
+    var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,7 @@ class ZCHotViewController: ZCAnimateNavAndTabViewController {
     /// 查询数据
     private func requestData(){
         requestBanner()
-        requestHotList()
+        requestHotList(pageIndex: 1)
         notifyRequsetEnd()
     }
     
@@ -48,30 +50,38 @@ class ZCHotViewController: ZCAnimateNavAndTabViewController {
     private func requestBanner(){
         dGroup.enter()
         let serviceM = ZCApiServiceManager<ZCApiService>()
-        let _ = serviceM.request(ZCApiService.getAD, model: ZCBannerListModel.self) { [weak self] (success, errorDesc, model) in
+        let _ = serviceM.request(ZCApiService.getAD, model: ZCBannerListModel.self) { (success, errorDesc, model) in
             
-            self?.dGroup.leave()
+            self.dGroup.leave()
             if !success {
-                self?.view.showToast(text: errorDesc)
+                self.view.showToast(text: errorDesc)
                 return
             }
-            self?.bannerDatasource = model
+            self.bannerDatasource.removeAll()
+            self.bannerDatasource += model!.customData
         }
         
     }
     
     /// 直播列表
-    private func requestHotList(){
+    private func requestHotList(pageIndex:Int){
         let serviceM = ZCApiServiceManager<ZCApiService>()
         dGroup.enter()
-        let _ = serviceM.request(ZCApiService.hotLive(page: 1), model: ZCLiveListModel.self) { [weak self] (success, errorDesc, model) in
+        let _ = serviceM.request(ZCApiService.hotLive(page: pageIndex), model: ZCLiveListModel.self) { (success, errorDesc, model) in
             
-            self?.dGroup.leave()
+            self.dGroup.leave()
             if !success {
-                self?.view.showToast(text: errorDesc)
+                self.view.showToast(text: errorDesc)
                 return
             }
-            self?.hotDatasource = model
+            self.page = pageIndex
+            if self.page == 1{
+                self.hotDatasource.removeAll()
+            }
+            if self.page >= model!.counts{
+                self.collectionView.refreshNoMore()
+            }
+            self.hotDatasource += model!.list
         }
         
     }
@@ -90,21 +100,21 @@ class ZCHotViewController: ZCAnimateNavAndTabViewController {
         layout.minimumLineSpacing = 5
         let collectionView = UICollectionView.init(frame: .zero, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets.init(top: homeTitleViewHeight, left: 0, bottom: -kTabbarHeight, right: 0)
+        collectionView.contentInset = UIEdgeInsets.init(top: homeTitleViewHeight, left: 0, bottom: -kTabbarHeight-homeTitleViewHeight, right: 0)
         collectionView.backgroundColor = UIColor.colorFormHex(hexValue: 0xf0f0f0)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ZCHotBannerCollectionViewCell.self, forCellWithReuseIdentifier: hotBannerCollectionViewCellId)
         collectionView.register(ZCHotLiveCollectionViewCell.self, forCellWithReuseIdentifier: hotLiveCollectionViewCellId)
         
-        collectionView.headerRefresh { [weak self] in
-            self?.requestData()
+        collectionView.headerRefresh {
+            self.requestData()
         }
         
-//        collectionView.footerRefresh {
-//            [weak self] in
-//
-//        }
+        collectionView.footerRefresh {
+            self.requestHotList(pageIndex: self.page+1)
+            self.notifyRequsetEnd()
+        }
         
         return collectionView
     }()
@@ -121,18 +131,18 @@ extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSou
         if section == 0 {
             return 1
         }
-        return self.hotDatasource?.list?.count ?? 0
+        return self.hotDatasource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section==0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hotBannerCollectionViewCellId, for: indexPath) as! ZCHotBannerCollectionViewCell
-            cell.bannerList = self.bannerDatasource?.customData
+            cell.bannerList = self.bannerDatasource
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hotLiveCollectionViewCellId, for: indexPath) as! ZCHotLiveCollectionViewCell
-        cell.hotLive = self.hotDatasource?.list?[indexPath.row]
+        cell.hotLive = self.hotDatasource[indexPath.row]
         return cell
     }
     

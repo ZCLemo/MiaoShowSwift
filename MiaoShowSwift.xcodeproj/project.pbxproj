@@ -68,6 +68,7 @@
 		B9802E2020204497001A871E /* ZCHotLiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E1F20204497001A871E /* ZCHotLiveCollectionViewCell.swift */; };
 		B9802E2520206034001A871E /* UIScrollView+ZCRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */; };
 		B9802E29202090AE001A871E /* UIColor+ZCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E28202090AE001A871E /* UIColor+ZCExtension.swift */; };
+		B993E700202A9ED800259599 /* ZCLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */; };
 		B9A247FC2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A247FB2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +159,7 @@
 		B9802E1F20204497001A871E /* ZCHotLiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHotLiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZCRefresh.swift"; sourceTree = "<group>"; };
 		B9802E28202090AE001A871E /* UIColor+ZCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZCExtension.swift"; sourceTree = "<group>"; };
+		B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveViewController.swift; sourceTree = "<group>"; };
 		B9A247FB2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAnimateNavAndTabViewController.swift; sourceTree = "<group>"; };
 		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -336,6 +338,7 @@
 		B95336D520172DAC00B74B9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B993E6FD202A9B2C00259599 /* Live */,
 				B95336F22018253900B74B9C /* Tools */,
 				B95336E52017448600B74B9C /* AppController */,
 				B9802DFD201B08B1001A871E /* Defines */,
@@ -634,6 +637,30 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
+		B993E6FD202A9B2C00259599 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				B993E701202A9F1E00259599 /* Views */,
+				B993E6FE202A9E8300259599 /* ViewControllers */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		B993E6FE202A9E8300259599 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B993E701202A9F1E00259599 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -868,6 +895,7 @@
 				B90EBA0A20245B5C00CA3EAC /* UIView+ZCEaseBlankPageView.swift in Sources */,
 				B9802DFF201B08D3001A871E /* CommonDefine.swift in Sources */,
 				B9802E03201B22D5001A871E /* ZCHotBannerCollectionViewCell.swift in Sources */,
+				B993E700202A9ED800259599 /* ZCLiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

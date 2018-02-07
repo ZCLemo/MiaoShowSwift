@@ -10,7 +10,7 @@ import UIKit
 
 class ZCHotLiveCollectionViewCell: UICollectionViewCell {
     
-    var hotLive : ZCLiveModel?{
+    var hotLive = ZCLiveModel() {
         didSet{
             dealData()
         }
@@ -78,15 +78,15 @@ class ZCHotLiveCollectionViewCell: UICollectionViewCell {
     /// 赋值
     private func dealData(){
         
-        backgroundImageView.zc_setImage(urlStr: hotLive?.bigpic, placeHolderImage: UIImage(named: "placeholder_head"))
+        backgroundImageView.zc_setImage(urlStr: hotLive.bigpic, placeHolderImage: UIImage(named: "placeholder_head"))
         
-        audienceLabel.text = String(hotLive?.allnum ?? 0)
+        audienceLabel.text = String(hotLive.allnum)
         
-        nickNameLabel.text = hotLive?.myname
+        nickNameLabel.text = hotLive.myname
         
-        levelIcon.image = UIImage(named: "girl_star\(hotLive?.starlevel ?? 1)_40x19")
+        levelIcon.image = UIImage(named: "girl_star\(hotLive.starlevel)_40x19")
         
-        locationLabel.text = hotLive?.gps
+        locationLabel.text = hotLive.gps
     }
     
     //MARK: Lazy

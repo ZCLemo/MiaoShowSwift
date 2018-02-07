@@ -12,16 +12,16 @@ import HandyJSON
 class ZCBannerModel: HandyJSON {
     
     /// 标题
-    var title : String?
+    var title : String = ""
     
     /// 图片
-    var imageUrl : String?
+    var imageUrl : String = ""
     
     /// 跳转链接
-    var link : String?
+    var link : String = ""
     
     /// 内容
-    var contents : String?
+    var contents : String = ""
     
 
     var cutTime : Int = 0
@@ -39,7 +39,6 @@ class ZCBannerModel: HandyJSON {
 }
 
 class ZCBannerListModel: HandyJSON {
-
-    var customData : [ZCBannerModel]?
+    var customData : [ZCBannerModel] = [ZCBannerModel]()
     required init(){}
 }

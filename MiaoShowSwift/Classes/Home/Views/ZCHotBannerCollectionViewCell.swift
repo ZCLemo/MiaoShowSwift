@@ -10,9 +10,9 @@ import UIKit
 
 class ZCHotBannerCollectionViewCell: UICollectionViewCell {
     
-    var bannerList : [ZCBannerModel]?{
+    var bannerList : [ZCBannerModel]! {
         didSet{
-            pageControl.numberOfPages = bannerList?.count ?? 0
+            pageControl.numberOfPages = bannerList.count
             bannerView.reloadData()
         }
     }
@@ -63,14 +63,14 @@ class ZCHotBannerCollectionViewCell: UICollectionViewCell {
 extension ZCHotBannerCollectionViewCell : ZCBannerViewDataSource,ZCBannerViewDelegate{
     
     func numberOfItems() -> Int {
-        return bannerList?.count ?? 0
+        return bannerList.count
     }
 
     func bannerView(bannerView: ZCBannerView, itemForBannerViewAt index: Int) -> UIView {
-        let banner = bannerList?[index]
+        let banner = bannerList[index]
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 0, y: 0, width: bannerView.w, height: bannerView.h)
-        imageView.zc_setImage(urlStr: banner?.imageUrl, placeHolderImage: UIImage(named: "placeHolder_ad_414x100"))
+        imageView.zc_setImage(urlStr: banner.imageUrl, placeHolderImage: UIImage(named: "placeHolder_ad_414x100"))
         return imageView
     }
 

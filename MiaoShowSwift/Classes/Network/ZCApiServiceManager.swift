@@ -48,11 +48,9 @@ class ZCApiServiceManager<Target : TargetType> {
     ///   - model: 需要序列化的对象
     ///   - completion: 完成闭包
     /// - Returns: Cancellable
-    func request<T: HandyJSON>(_ target : Target,model: T.Type,completion:((_ success:Bool, _ errorDesc:String?, _ data: T?) -> Void)?) -> Cancellable?{
+    func request<T: HandyJSON>(_ target : Target,model: T.Type,completion: @escaping (_ success:Bool, _ errorDesc:String?, _ data: T?) -> Void) -> Cancellable?{
         
         return apiService.request(target as! ZCApiService, completion: { (result) in
-            
-            guard let completion = completion else{return}
             
             if result.error != nil{
                 let errorDesc = result.error!.errorDescription

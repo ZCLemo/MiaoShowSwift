@@ -10,7 +10,7 @@ import UIKit
 
 class ZCNewestCollectionViewCell: UICollectionViewCell {
     
-    var newestLive : ZCNewestLiveModel?{
+    var newestLive = ZCNewestLiveModel() {
         didSet{
             dealData()
         }
@@ -64,20 +64,13 @@ class ZCNewestCollectionViewCell: UICollectionViewCell {
     
     private func dealData(){
         
-        self.layer.transform = CATransform3DMakeScale(0.2, 0.2, 0.2)
-        backgroundImageView.zc_setImage(urlStr: newestLive?.photo, placeHolderImage: UIImage.init(named: "placeholder_head")) { (image, error, tpe, url) in
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                self.layer.transform = CATransform3DMakeScale(1, 1, 1)
-
-            })
-        }
+        backgroundImageView.zc_setImage(urlStr: newestLive.photo, placeHolderImage: UIImage(named: "placeholder_head"))
         
-        locationLabel.text = newestLive?.position
+        locationLabel.text = newestLive.position
         
-        nickNameLabel.text = newestLive?.nickname
+        nickNameLabel.text = newestLive.nickname
         
-        levelIcon.image = UIImage(named: "girl_star\(newestLive?.starlevel ?? 1)_40x19")
+        levelIcon.image = UIImage(named: "girl_star\(newestLive.starlevel)_40x19")
     }
     
     

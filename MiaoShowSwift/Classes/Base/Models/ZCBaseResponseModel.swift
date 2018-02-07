@@ -11,9 +11,9 @@ import HandyJSON
 
 class ZCBaseResponseModel<T : HandyJSON>: HandyJSON {
 
-    var code : String?
-    var msg : String?
-    var data : T?
+    var code : String = ""
+    var msg : String = ""
+    var data : T = T()
     
     required init(){}
     

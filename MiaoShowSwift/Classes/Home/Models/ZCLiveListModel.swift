@@ -13,28 +13,28 @@ class ZCLiveModel: HandyJSON {
     
     
     /// 昵称
-    var myname : String?
+    var myname : String = ""
     
     /// 直播图
-    var bigpic : String?
+    var bigpic : String = ""
     
     /// 主播头像
-    var smallpic : String?
+    var smallpic : String = ""
     
     /// 直播流地址
-    var flv : String?
+    var flv : String = ""
 
     /// 所在城市
-    var gps : String?
+    var gps : String = ""
     
     /// 个性签名
-    var signatures : String?
+    var signatures : String = ""
     
     /// 用户ID
-    var userId : String?
+    var userId : String = ""
     
     /// 用户IDx
-    var useridx : String?
+    var useridx : String = ""
     
     /// 星级
     var starlevel : UInt = 0
@@ -58,7 +58,7 @@ class ZCLiveListModel: HandyJSON {
     
     var counts : Int = 0
     
-    var list : [ZCLiveModel]?
+    var list : [ZCLiveModel] = [ZCLiveModel]()
     
     required init() {}
 }

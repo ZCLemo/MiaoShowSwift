@@ -12,10 +12,10 @@ import HandyJSON
 class ZCNewestLiveModel: HandyJSON {
 
     /// 昵称
-    var nickname : String?
+    var nickname : String = ""
     
     /// 图片地址
-    var photo : String?
+    var photo : String = ""
     
     /// 性别
     var sex : Int = 0
@@ -33,13 +33,13 @@ class ZCNewestLiveModel: HandyJSON {
     var useridx : Int = 0
     
     /// 推流
-    var flv : String?
+    var flv : String = ""
     
     /// 服务器id
     var serverid : Int = 0
     
     /// 住址
-    var position : String?
+    var position : String = ""
     
     /// 客户端类型
     var phonetype : Int = 0
@@ -48,7 +48,10 @@ class ZCNewestLiveModel: HandyJSON {
     var isOnline : Int = 0
     
     /// 家族名称
-    var familyName : String?
+    var familyName : String = ""
+    
+    /// 标记是否展示过动画
+    var isAnimated : Bool = false
     
     required init() {}
 }
@@ -56,6 +59,6 @@ class ZCNewestLiveModel: HandyJSON {
 class ZCNewestListModel : HandyJSON {
     
     var totalPage : Int = 0
-    var list : [ZCNewestLiveModel]?
+    var list : [ZCNewestLiveModel] = [ZCNewestLiveModel]()
     required init() {}
 }
