@@ -74,7 +74,6 @@ class ZCMyInfoCell: UITableViewCell {
             rightImageView.image = nil
         }
         
-        
         switch cellModel.cellType {
         case .text:
             textLb.snp.remakeConstraints {
