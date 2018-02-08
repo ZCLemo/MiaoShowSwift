@@ -149,6 +149,18 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         
     }
     
+    
+    /// 退出
+    private func quit(){
+        if livePlayer != nil {
+            livePlayer!.shutdown()
+            livePlayer!.view.removeFromSuperview()
+            livePlayer = nil
+        }
+        
+        self.parentVC.dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: Lazy
     
     private lazy var placeholdImageView : UIImageView = {
@@ -199,7 +211,7 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         let toolView = ZCLiveToolView()
         toolView.functionClickClourse = { [weak self] (functionType) in
             if functionType == .close{
-                self?.parentVC.dismiss(animated: true, completion: nil)
+                self?.quit()
             }
         }
         return toolView
