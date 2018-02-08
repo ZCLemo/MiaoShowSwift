@@ -69,7 +69,6 @@
 		B9802E2520206034001A871E /* UIScrollView+ZCRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */; };
 		B9802E29202090AE001A871E /* UIColor+ZCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E28202090AE001A871E /* UIColor+ZCExtension.swift */; };
 		B993E700202A9ED800259599 /* ZCLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */; };
-		B993E704202AE1E000259599 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B993E703202AE1E000259599 /* IJKMediaFramework.framework */; };
 		B993E706202AE6A400259599 /* ZCLiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E705202AE6A400259599 /* ZCLiveCollectionViewCell.swift */; };
 		B993E709202B02A200259599 /* UIImage+ZCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E708202B02A200259599 /* UIImage+ZCExtension.swift */; };
 		B993E70B202C1EE700259599 /* ZCLiveToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E70A202C1EE700259599 /* ZCLiveToolView.swift */; };
@@ -168,7 +167,6 @@
 		B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZCRefresh.swift"; sourceTree = "<group>"; };
 		B9802E28202090AE001A871E /* UIColor+ZCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZCExtension.swift"; sourceTree = "<group>"; };
 		B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveViewController.swift; sourceTree = "<group>"; };
-		B993E703202AE1E000259599 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		B993E705202AE6A400259599 /* ZCLiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		B993E708202B02A200259599 /* UIImage+ZCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ZCExtension.swift"; sourceTree = "<group>"; };
 		B993E70A202C1EE700259599 /* ZCLiveToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveToolView.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				B9773C4E2019B06300C137A0 /* libsqlite3.tbd in Frameworks */,
 				B9773C4C2019B05800C137A0 /* libiconv.tbd in Frameworks */,
 				B9773C4A2019B05000C137A0 /* CoreGraphics.framework in Frameworks */,
-				B993E704202AE1E000259599 /* IJKMediaFramework.framework in Frameworks */,
 				B9773C482019B04900C137A0 /* CoreTelephony.framework in Frameworks */,
 				B9773C462019B04200C137A0 /* Security.framework in Frameworks */,
 				B9773C442019B03B00C137A0 /* SystemConfiguration.framework in Frameworks */,
@@ -561,7 +558,6 @@
 		B9773C402019AFD600C137A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B993E703202AE1E000259599 /* IJKMediaFramework.framework */,
 				B9773C412019B00100C137A0 /* TencentOpenAPI.framework */,
 			);
 			path = Frameworks;
