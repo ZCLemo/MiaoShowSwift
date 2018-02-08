@@ -153,6 +153,16 @@ extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSou
         return CGSize(width:kScreenWidth,height:ZCHotLiveCollectionViewCell.cellHeight())
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            return
+        }
+        let liveVC = ZCLiveViewController()
+        liveVC.liveList = hotDatasource
+        liveVC.currentIndex = indexPath.row
+        self.present(liveVC, animated: true, completion: nil)
+    }
+    
 }
 
 

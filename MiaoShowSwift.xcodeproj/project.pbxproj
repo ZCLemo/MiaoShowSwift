@@ -69,7 +69,15 @@
 		B9802E2520206034001A871E /* UIScrollView+ZCRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */; };
 		B9802E29202090AE001A871E /* UIColor+ZCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9802E28202090AE001A871E /* UIColor+ZCExtension.swift */; };
 		B993E700202A9ED800259599 /* ZCLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */; };
+		B993E704202AE1E000259599 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B993E703202AE1E000259599 /* IJKMediaFramework.framework */; };
+		B993E706202AE6A400259599 /* ZCLiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E705202AE6A400259599 /* ZCLiveCollectionViewCell.swift */; };
+		B993E709202B02A200259599 /* UIImage+ZCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E708202B02A200259599 /* UIImage+ZCExtension.swift */; };
+		B993E70B202C1EE700259599 /* ZCLiveToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993E70A202C1EE700259599 /* ZCLiveToolView.swift */; };
 		B9A247FC2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A247FB2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift */; };
+		B9FF0582202C3BF200C3DA39 /* ZCLiveInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF0581202C3BF200C3DA39 /* ZCLiveInfomationView.swift */; };
+		B9FF0584202C498F00C3DA39 /* ZCChaoyangUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF0583202C498F00C3DA39 /* ZCChaoyangUsersView.swift */; };
+		B9FF0587202C49CA00C3DA39 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9FF0586202C49CA00C3DA39 /* user.plist */; };
+		B9FF058A202C559E00C3DA39 /* ZCChaoyangUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF0589202C559E00C3DA39 /* ZCChaoyangUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,7 +168,15 @@
 		B9802E2420206034001A871E /* UIScrollView+ZCRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ZCRefresh.swift"; sourceTree = "<group>"; };
 		B9802E28202090AE001A871E /* UIColor+ZCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZCExtension.swift"; sourceTree = "<group>"; };
 		B993E6FF202A9ED800259599 /* ZCLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveViewController.swift; sourceTree = "<group>"; };
+		B993E703202AE1E000259599 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		B993E705202AE6A400259599 /* ZCLiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		B993E708202B02A200259599 /* UIImage+ZCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ZCExtension.swift"; sourceTree = "<group>"; };
+		B993E70A202C1EE700259599 /* ZCLiveToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveToolView.swift; sourceTree = "<group>"; };
 		B9A247FB2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAnimateNavAndTabViewController.swift; sourceTree = "<group>"; };
+		B9FF0581202C3BF200C3DA39 /* ZCLiveInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLiveInfomationView.swift; sourceTree = "<group>"; };
+		B9FF0583202C498F00C3DA39 /* ZCChaoyangUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCChaoyangUsersView.swift; sourceTree = "<group>"; };
+		B9FF0586202C49CA00C3DA39 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
+		B9FF0589202C559E00C3DA39 /* ZCChaoyangUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCChaoyangUser.swift; sourceTree = "<group>"; };
 		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +190,7 @@
 				B9773C4E2019B06300C137A0 /* libsqlite3.tbd in Frameworks */,
 				B9773C4C2019B05800C137A0 /* libiconv.tbd in Frameworks */,
 				B9773C4A2019B05000C137A0 /* CoreGraphics.framework in Frameworks */,
+				B993E704202AE1E000259599 /* IJKMediaFramework.framework in Frameworks */,
 				B9773C482019B04900C137A0 /* CoreTelephony.framework in Frameworks */,
 				B9773C462019B04200C137A0 /* Security.framework in Frameworks */,
 				B9773C442019B03B00C137A0 /* SystemConfiguration.framework in Frameworks */,
@@ -311,6 +328,7 @@
 				B9773C532019B46300C137A0 /* MiaoShowSwift-Bridging-Header.h */,
 				B95336AC20172BD100B74B9C /* Assets.xcassets */,
 				B95336B120172BD100B74B9C /* Info.plist */,
+				B9FF0585202C49AB00C3DA39 /* Resources */,
 				B9773C402019AFD600C137A0 /* Frameworks */,
 				B95336D520172DAC00B74B9C /* Classes */,
 			);
@@ -458,6 +476,7 @@
 		B95336F62018562500B74B9C /* UIFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				B993E707202B028900259599 /* UIImage */,
 				B9802E2220205FD2001A871E /* UIScrollView */,
 				B9773C5B2019DA0F00C137A0 /* UIView */,
 				B95336F72018563B00B74B9C /* UIImageView */,
@@ -542,6 +561,7 @@
 		B9773C402019AFD600C137A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B993E703202AE1E000259599 /* IJKMediaFramework.framework */,
 				B9773C412019B00100C137A0 /* TencentOpenAPI.framework */,
 			);
 			path = Frameworks;
@@ -640,6 +660,7 @@
 		B993E6FD202A9B2C00259599 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				B9FF0588202C558400C3DA39 /* Models */,
 				B993E701202A9F1E00259599 /* Views */,
 				B993E6FE202A9E8300259599 /* ViewControllers */,
 			);
@@ -657,8 +678,36 @@
 		B993E701202A9F1E00259599 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B993E705202AE6A400259599 /* ZCLiveCollectionViewCell.swift */,
+				B993E70A202C1EE700259599 /* ZCLiveToolView.swift */,
+				B9FF0581202C3BF200C3DA39 /* ZCLiveInfomationView.swift */,
+				B9FF0583202C498F00C3DA39 /* ZCChaoyangUsersView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B993E707202B028900259599 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				B993E708202B02A200259599 /* UIImage+ZCExtension.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		B9FF0585202C49AB00C3DA39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF0586202C49CA00C3DA39 /* user.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9FF0588202C558400C3DA39 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF0589202C559E00C3DA39 /* ZCChaoyangUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -774,6 +823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B95336AD20172BD100B74B9C /* Assets.xcassets in Resources */,
+				B9FF0587202C49CA00C3DA39 /* user.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,11 +902,16 @@
 				B95336E7201744B100B74B9C /* AppDelegate.swift in Sources */,
 				B9533707201987B200B74B9C /* ZCHomeViewController.swift in Sources */,
 				B95336FC20185E9500B74B9C /* ZCCircleTimerView.swift in Sources */,
+				B993E706202AE6A400259599 /* ZCLiveCollectionViewCell.swift in Sources */,
+				B9FF0582202C3BF200C3DA39 /* ZCLiveInfomationView.swift in Sources */,
 				B9533702201985C400B74B9C /* ZCBaseNavigationViewController.swift in Sources */,
 				B9802E2020204497001A871E /* ZCHotLiveCollectionViewCell.swift in Sources */,
 				B9773C5A2019C2AA00C137A0 /* ZCAccount.swift in Sources */,
+				B993E709202B02A200259599 /* UIImage+ZCExtension.swift in Sources */,
 				B9802DF4201B056C001A871E /* ZCHotViewController.swift in Sources */,
+				B9FF058A202C559E00C3DA39 /* ZCChaoyangUser.swift in Sources */,
 				B90EBA08202450DF00CA3EAC /* ZCLiveRankViewController.swift in Sources */,
+				B9FF0584202C498F00C3DA39 /* ZCChaoyangUsersView.swift in Sources */,
 				B95336EC201746D900B74B9C /* ZCAdManager.swift in Sources */,
 				B90EBA27202986F800CA3EAC /* ZCMyInfoCellDataSourceManager.swift in Sources */,
 				B95336F12017596F00B74B9C /* ZCAccountManager.swift in Sources */,
@@ -884,6 +939,7 @@
 				B90EBA132028026D00CA3EAC /* ZCTabBarView.swift in Sources */,
 				B95336DF201732DC00B74B9C /* ZCLoginViewController.swift in Sources */,
 				B91AF9F6202404510049D996 /* ZCNewestCollectionViewCell.swift in Sources */,
+				B993E70B202C1EE700259599 /* ZCLiveToolView.swift in Sources */,
 				B9802E01201B1636001A871E /* UIView+ZCFrame.swift in Sources */,
 				B9773C62201AC5D800C137A0 /* ZCHomeCategoryTitleView.swift in Sources */,
 				B95336F92018568000B74B9C /* UIImageView+ZCCache.swift in Sources */,

@@ -31,7 +31,7 @@ extension UIView{
     ///   - userInteraction: 是否可操作
     ///   - delay: 时长
     func showWatting(userInteraction:Bool,delay:TimeInterval){
-        
+        self.hiddenWatting()
         let hud = MBProgressHUD.init(view: self)
         hud.removeFromSuperViewOnHide = true
         hud.mode = .indeterminate

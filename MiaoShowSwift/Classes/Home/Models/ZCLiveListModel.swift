@@ -11,7 +11,6 @@ import HandyJSON
 
 class ZCLiveModel: HandyJSON {
     
-    
     /// 昵称
     var myname : String = ""
     
