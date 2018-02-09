@@ -77,6 +77,7 @@
 		B9FF0584202C498F00C3DA39 /* ZCChaoyangUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF0583202C498F00C3DA39 /* ZCChaoyangUsersView.swift */; };
 		B9FF0587202C49CA00C3DA39 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9FF0586202C49CA00C3DA39 /* user.plist */; };
 		B9FF058A202C559E00C3DA39 /* ZCChaoyangUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF0589202C559E00C3DA39 /* ZCChaoyangUser.swift */; };
+		B9FF0592202D75ED00C3DA39 /* ZCPraiseEmitterLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FF0591202D75ED00C3DA39 /* ZCPraiseEmitterLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		B9FF0583202C498F00C3DA39 /* ZCChaoyangUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCChaoyangUsersView.swift; sourceTree = "<group>"; };
 		B9FF0586202C49CA00C3DA39 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		B9FF0589202C559E00C3DA39 /* ZCChaoyangUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCChaoyangUser.swift; sourceTree = "<group>"; };
+		B9FF0591202D75ED00C3DA39 /* ZCPraiseEmitterLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCPraiseEmitterLayer.swift; sourceTree = "<group>"; };
 		CBF81748E13D55829DCE176A /* Pods_MiaoShowSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiaoShowSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -678,6 +680,7 @@
 				B993E70A202C1EE700259599 /* ZCLiveToolView.swift */,
 				B9FF0581202C3BF200C3DA39 /* ZCLiveInfomationView.swift */,
 				B9FF0583202C498F00C3DA39 /* ZCChaoyangUsersView.swift */,
+				B9FF0591202D75ED00C3DA39 /* ZCPraiseEmitterLayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				B9A247FC2021AAA500F45870 /* ZCAnimateNavAndTabViewController.swift in Sources */,
 				B95336E9201744FE00B74B9C /* ZCAppControllerManager.swift in Sources */,
 				B9802E1C201F1C33001A871E /* ZCLiveListModel.swift in Sources */,
+				B9FF0592202D75ED00C3DA39 /* ZCPraiseEmitterLayer.swift in Sources */,
 				B95336E32017368B00B74B9C /* ZCAdViewController.swift in Sources */,
 				B90EBA1E2029839600CA3EAC /* ZCMyInfoCell.swift in Sources */,
 				B90EBA0C20245D2B00CA3EAC /* ZCEaseBlankPageView.swift in Sources */,

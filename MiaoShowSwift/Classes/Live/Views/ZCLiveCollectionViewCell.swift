@@ -15,6 +15,8 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
     var livePlayer : IJKFFMoviePlayerController?
     
     weak var parentVC : UIViewController!
+  
+    private var praiseBirthRate : Float = 1.0
     
     var live = ZCLiveModel() {
         didSet{
@@ -34,6 +36,7 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         
         createUI()
     }
+
     
     //MARK: Pravite
     
@@ -69,6 +72,8 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
             $0.centerY.equalTo(infomationView)
             $0.height.equalTo(40)
         }
+        
+        contentView.layer.addSublayer(praiseEmitterLayer)
     }
     
     /// 赋值
@@ -84,6 +89,7 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
             livePlayer!.view.removeFromSuperview()
             livePlayer = nil
             NotificationCenter.default.removeObserver(self)
+            return
         }
         
         livePlayer = IJKFFMoviePlayerController.init(contentURLString: live.flv, with: options)
@@ -133,9 +139,10 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
             
             if !livePlayer!.isPlaying(){
                 livePlayer!.play()
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.contentView.hiddenWatting()
-                    self.placeholdImageView.isHidden = true
+                    self.contentView.sendSubview(toBack: self.placeholdImageView)
                 }
             }else{
                 //如果网络不好，后来恢复了，去掉加载动画
@@ -148,7 +155,6 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         }
         
     }
-    
     
     /// 退出
     private func quit(){
@@ -233,4 +239,36 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         let chaoyangUsersView = ZCChaoyangUsersView()
         return chaoyangUsersView
     }()
+    
+    //粒子动画
+    private lazy var praiseEmitterLayer : ZCPraiseEmitterLayer = {
+        let praiseEmitterLayer = ZCPraiseEmitterLayer()
+        praiseEmitterLayer.emitterPosition = CGPoint(x: kScreenWidth-50, y: kScreenHeight-50)
+        return praiseEmitterLayer
+    }()
 }
+
+//Mark - touchesBegan 点击加速
+
+extension ZCLiveCollectionViewCell {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        praiseBirthRate = praiseBirthRate + 1.0
+        if praiseBirthRate > 5.0 {
+            praiseBirthRate = 5.0
+        }
+        praiseEmitterLayer.birthRate = praiseBirthRate
+        //过0.5速度衰减一次
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            self.praiseBirthRate = self.praiseBirthRate - 1.0
+            if self.praiseBirthRate < 1.0{
+                self.praiseBirthRate = 1.0
+            }
+            self.praiseEmitterLayer.birthRate = self.praiseBirthRate
+        }
+    }
+    
+}
+
+
