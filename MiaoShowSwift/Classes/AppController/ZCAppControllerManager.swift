@@ -17,16 +17,16 @@ class ZCAppControllerManager {
     
     /// 设置根控制器
     func setUpRoot(){
-//        if ZCAdManager.sharedInstance().showAd() {
-//            ZCAdManager.sharedInstance().shownAd = true
-//            setUpAd()
-//        }else if !ZCAccountManager.sharedInstance().isLogin(){
-//            setUpLogin()
-//        }else{
-//            setUpMain()
-//        }
+        if ZCAdManager.sharedInstance().showAd() {
+            ZCAdManager.sharedInstance().shownAd = true
+            setUpAd()
+        }else if !ZCAccountManager.sharedInstance().isLogin(){
+            setUpLogin()
+        }else{
+            setUpMain()
+        }
         
-        setUpMain()
+//        setUpMain()
     }
     
     

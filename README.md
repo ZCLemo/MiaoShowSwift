@@ -13,6 +13,8 @@
 
 * 获取图片资源：图片资源都打包在 Assets.car 文件中，解压的时候用到了 carTool 工具，github上有 [carTool地址](https://github.com/yuedong56/Assets.carTool)
 
+* 集成IJKMediaFramework.framework 由于IJKMediaFramework.framework超过100兆，github对于上传100M以上的大文件做了限制，我自己打包上传了百度云，[下载地址](https://pan.baidu.com/s/1i6umZnn) 提取码：tkh5 下载下来解压后直接拖到项目Frameworks文件夹下即可
+
 ### 做到这些准备工作就差不多了
 
 ## 项目结构：
@@ -27,9 +29,10 @@
 * My 我的模块
 * Account 账户中心，集成了qq登录
 * AD 广告模块
+* Live 直播模块
 
 ## 完成进度：
-### 现在主要完成了一些界面的搭建，数据请求，涉及到直播的东西还没做，后面会继续完成。
+### 现在主要完成了一些界面的搭建，数据请求，集成ijk完成直播，设计视频采集部分后面会继续完成。
 
 *登录 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/login.png)
 
@@ -42,4 +45,4 @@
 *我的 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/my.gif)
 
 ## 结尾：
-### 后面会继续写关于直播方面的，才是更大的挑战，ps:录gif工具用的LICEcap,挺好用的。[项目地址](https://github.com/ZCLemo/MiaoShowSwift),希望能对大家有点帮助，也是我自己swift学习的一个过程
+### ，ps:录gif工具用的LICEcap,挺好用的。[项目地址](https://github.com/ZCLemo/MiaoShowSwift),希望能对大家有点帮助
