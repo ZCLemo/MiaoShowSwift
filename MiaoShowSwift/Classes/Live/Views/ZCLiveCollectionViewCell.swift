@@ -123,9 +123,8 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         //      2、用户http请求该地址，若请求成功表示直播未结束，否则结束
         Alamofire.request(live.flv).responseJSON { (response) in
             if response.error != nil{
-                self.livePlayer!.shutdown()
-                self.livePlayer!.view.removeFromSuperview()
-                self.livePlayer = nil
+                self.contentView.showToast(text: "该直播已结束")
+                self.quit()
             }
         }
         
@@ -157,14 +156,12 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
     }
     
     /// 退出
-    private func quit(){
+    func quit(){
         if livePlayer != nil {
             livePlayer!.shutdown()
             livePlayer!.view.removeFromSuperview()
             livePlayer = nil
         }
-        
-        self.parentVC.dismiss(animated: true, completion: nil)
     }
     
     //MARK: Lazy
@@ -218,6 +215,7 @@ class ZCLiveCollectionViewCell: UICollectionViewCell {
         toolView.functionClickClourse = { [weak self] (functionType) in
             if functionType == .close{
                 self?.quit()
+                self?.parentVC.dismiss(animated: true, completion: nil)
             }
         }
         return toolView

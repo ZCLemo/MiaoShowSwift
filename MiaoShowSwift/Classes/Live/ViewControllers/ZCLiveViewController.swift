@@ -82,9 +82,18 @@ extension ZCLiveViewController : UICollectionViewDelegate,UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: liveCollectionViewCellId, for: indexPath) as! ZCLiveCollectionViewCell
-        cell.live = self.loopLiveList[indexPath.row]
-        cell.parentVC = self
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let liveCell = cell as! ZCLiveCollectionViewCell
+        liveCell.live = self.loopLiveList[indexPath.row]
+        liveCell.parentVC = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let liveCell = cell as! ZCLiveCollectionViewCell
+        liveCell.quit()
     }
     
 }
