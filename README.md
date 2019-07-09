@@ -34,15 +34,15 @@
 ## 完成进度：
 ### 现在主要完成了一些界面的搭建，数据请求，集成ijk完成直播，涉及视频采集部分后面会继续完成。
 
-*登录 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/login.png)
+*登录 ![img](http://upload-images.jianshu.io/upload_images/1930004-6220a6c1dd8fd5eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-*广告 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/ad.gif)
+*广告 ![img](http://upload-images.jianshu.io/upload_images/1930004-a655d04a8e4bcd14.gif?imageMogr2/auto-orient/strip)
 
-*热门 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/ho%27t.gif)
+*热门 ![img](http://upload-images.jianshu.io/upload_images/1930004-4833c3b447ac9e23.gif?imageMogr2/auto-orient/strip)
 
-*最新 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/new.gif)
+*最新 ![img](http://upload-images.jianshu.io/upload_images/1930004-b3ec1c6b4bdf47db.gif?imageMogr2/auto-orient/strip)
 
-*我的 ![img](http://7xt7tb.com1.z0.glb.clouddn.com/my.gif)
+*我的 ![img](http://upload-images.jianshu.io/upload_images/1930004-e4a15b28a90a164e.gif?imageMogr2/auto-orient/strip)
 
 ## 结尾：
 ### ，ps:录gif工具用的LICEcap,挺好用的。[项目地址](https://github.com/ZCLemo/MiaoShowSwift),希望能对大家有点帮助
