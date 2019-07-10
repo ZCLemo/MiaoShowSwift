@@ -13,7 +13,7 @@
 
 * 获取图片资源：图片资源都打包在 Assets.car 文件中，解压的时候用到了 carTool 工具，github上有 [carTool地址](https://github.com/yuedong56/Assets.carTool)
 
-* 集成IJKMediaFramework.framework 由于IJKMediaFramework.framework超过100兆，github对于上传100M以上的大文件做了限制，我自己打包上传了百度云，[下载地址](https://pan.baidu.com/s/1i6umZnn) 提取码：tkh5 下载下来解压后直接拖到项目Frameworks文件夹下即可
+* 集成IJKMediaFramework.framework 由于IJKMediaFramework.framework超过100兆，github对于上传100M以上的大文件做了限制，我自己打包上传了百度云，[下载地址](https://pan.baidu.com/s/1l24BzRt6Q8dNPS7hny3xFQ) 提取码：laty 下载下来解压后直接拖到项目Frameworks文件夹下即可
 
 ### 做到这些准备工作就差不多了
 
