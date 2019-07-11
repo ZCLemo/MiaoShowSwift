@@ -113,6 +113,14 @@ extension FloatPropertyProtocol {
 extension Float: FloatPropertyProtocol {}
 extension Double: FloatPropertyProtocol {}
 
+fileprivate let formatter: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.usesGroupingSeparator = false
+    formatter.numberStyle = .decimal
+    formatter.maximumFractionDigits = 16
+    return formatter
+}()
+
 extension String: _BuiltInBasicType {
 
     static func _transform(from object: Any) -> String? {
@@ -128,7 +136,7 @@ extension String: _BuiltInBasicType {
                     return "false"
                 }
             }
-            return num.stringValue
+            return formatter.string(from: num)
         case _ as NSNull:
             return nil
         default:
@@ -158,33 +166,6 @@ extension Optional: _BuiltInBasicType {
         return self.map( { (wrapped) -> Any in
             return wrapped as Any
         })
-    }
-
-    func _plainValue() -> Any? {
-        if let value = _getWrappedValue() {
-            if let transformable = value as? _Transformable {
-                return transformable.plainValue()
-            } else {
-                return value
-            }
-        }
-        return nil
-    }
-}
-
-extension ImplicitlyUnwrappedOptional: _BuiltInBasicType {
-
-    static func _transform(from object: Any) -> ImplicitlyUnwrappedOptional? {
-        if let value = (Wrapped.self as? _Transformable.Type)?.transform(from: object) as? Wrapped {
-            return ImplicitlyUnwrappedOptional(value)
-        } else if let value = object as? Wrapped {
-            return ImplicitlyUnwrappedOptional(value)
-        }
-        return nil
-    }
-
-    func _getWrappedValue() -> Any? {
-        return self == nil ? nil : self!
     }
 
     func _plainValue() -> Any? {
