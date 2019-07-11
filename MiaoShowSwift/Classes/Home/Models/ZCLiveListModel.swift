@@ -11,6 +11,8 @@ import HandyJSON
 
 class ZCLiveModel: HandyJSON {
     
+    /// 图片地址
+    var photo : String = ""
     /// 昵称
     var myname : String = ""
     

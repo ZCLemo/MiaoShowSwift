@@ -78,7 +78,7 @@ class ZCHotLiveCollectionViewCell: UICollectionViewCell {
     /// 赋值
     private func dealData(){
         
-        backgroundImageView.zc_setImage(urlStr: hotLive.bigpic, placeHolderImage: UIImage(named: "placeholder_head"))
+        backgroundImageView.zc_setImage(urlStr: hotLive.photo, placeHolderImage: UIImage(named: "placeholder_head"))
         
         audienceLabel.text = String(hotLive.allnum)
         

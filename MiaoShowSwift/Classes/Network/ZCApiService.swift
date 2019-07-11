@@ -24,7 +24,7 @@ extension ZCApiService : TargetType{
     var path: String {
         switch self {
         case .hotLive:
-            return "Fans/GetHotLive"
+            return "Room/GetNewRoomOnline"
             
         case .getAD:
             return "Living/GetAD"
