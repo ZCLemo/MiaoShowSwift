@@ -1,7 +1,7 @@
 # MiaoShowSwift
 高仿喵播swift版本
 ## 前言:
->swift出来很长时间了，已经4.0版本了，学了一段时间，打算自己写个高仿的项目巩固一下。在简书上看到过 Monkey_ALin  大神写的OC版仿喵播[项目地址](https://www.jianshu.com/p/b8db6c142aad)，觉得挺不错，于是我打算在这基础上写个swift版的。
+>swift出来很长时间了，学了一段时间，打算自己写个高仿的项目巩固一下。在简书上看到过 Monkey_ALin  大神写的OC版仿喵播[项目地址](https://www.jianshu.com/p/b8db6c142aad)，觉得挺不错，于是我打算在这基础上写个swift版的。
 
 
 ## 提前准备：
