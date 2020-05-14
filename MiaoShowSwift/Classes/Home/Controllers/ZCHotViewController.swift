@@ -160,6 +160,7 @@ extension ZCHotViewController : UICollectionViewDelegate,UICollectionViewDataSou
         let liveVC = ZCLiveViewController()
         liveVC.liveList = hotDatasource
         liveVC.currentIndex = indexPath.row
+        liveVC.modalPresentationStyle = .fullScreen
         self.present(liveVC, animated: true, completion: nil)
     }
     
