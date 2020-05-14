@@ -1141,7 +1141,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zclemo.miaoshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bea50b63-741f-40db-bf79-6485c4fb3f73";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MiaoShowSwift/MiaoShowSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1191,7 +1191,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zclemo.miaoshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bea50b63-741f-40db-bf79-6485c4fb3f73";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MiaoShowSwift/MiaoShowSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

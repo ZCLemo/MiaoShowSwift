@@ -41,10 +41,10 @@ extension UIScrollView{
     /// 结束刷新
     func endRefresh(){
         if mj_header != nil {
-           mj_header.endRefreshing()
+            mj_header?.endRefreshing()
         }
         if mj_footer != nil {
-            mj_footer.endRefreshing()
+            mj_footer?.endRefreshing()
         }
         
     }
@@ -53,7 +53,7 @@ extension UIScrollView{
     /// 自动刷新
     func beginHeaderRefreshing(){
         if mj_header != nil {
-            mj_header.beginRefreshing()
+            mj_header?.beginRefreshing()
         }
     }
     
@@ -61,7 +61,7 @@ extension UIScrollView{
     /// 加载到最后一页
     func refreshNoMore(){
         if mj_footer != nil {
-            mj_footer.endRefreshingWithNoMoreData()
+            mj_footer?.endRefreshingWithNoMoreData()
         }
     }
     
@@ -71,7 +71,7 @@ extension UIScrollView{
     /// - Parameter isHidden:
     func headerHidden(isHidden:Bool){
         if mj_header != nil {
-            mj_header.isHidden = isHidden
+            mj_header?.isHidden = isHidden
         }
     }
     
@@ -81,7 +81,7 @@ extension UIScrollView{
     /// - Parameter isHidden: 
     func footerHidden(isHidden:Bool){
         if mj_footer != nil {
-            mj_footer.isHidden = isHidden
+            mj_footer?.isHidden = isHidden
         }
     }
     
@@ -93,8 +93,8 @@ extension UIScrollView{
             return
         }
         
-        header!.lastUpdatedTimeLabel.isHidden = true
-        header!.stateLabel.isHidden = true
+        header!.lastUpdatedTimeLabel?.isHidden = true
+        header!.stateLabel?.isHidden = true
         header!.setImages([UIImage(named: "reflesh1_60x55") as Any], for: .pulling)
         header!.setImages([
             UIImage(named: "reflesh1_60x55") as Any,
@@ -110,6 +110,6 @@ extension UIScrollView{
             return
         }
         
-        footer!.stateLabel.isHidden = true
+        footer!.stateLabel?.isHidden = true
     }
 }
